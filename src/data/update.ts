@@ -1,7 +1,14 @@
 export const siteUpdates = [
   {
       date: '2025-12-12',
-      slug: "blog-post-updated-no-one-to-replace-you",
+      slug: "corrected-disclaimer-date-notation-error",
+      title: "We have immediately corrected an error in the date notation within the disclaimer,",
+      content: "We have immediately corrected an error in the date notation within the disclaimer. To prevent recurrence, we will implement a checklist for content verification."
+  }
+  ,
+  {
+      date: '2025-12-12',
+      slug: "fixed-url-description-error-in-blog-tags",
       title: "Fixed URL description error in blog tags",
       content: "Fixed URL errors in blog tagss."
   },
