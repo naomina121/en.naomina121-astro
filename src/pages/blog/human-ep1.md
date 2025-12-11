@@ -53,6 +53,7 @@ By taking preventative steps from the outset, you can suppress the risk of devel
 Make it your mantra:
 
 ‘<font color="#de7802">**There are countless people who would accept me**’
+
 ‘<font color="#de7802">**There are countless others who would be delighted to accept me, overflowing with people willing to do so**</font>’
 
 Make this your mantra.
