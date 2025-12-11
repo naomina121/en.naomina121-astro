@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import MainToc from "../components/MainToc.astro";
+const pageTitle = "Mental Health";
+const PubDate = "2025-12-11";
+const ModDate = "2025-12-11";
+---
+<Layout pageTitle={pageTitle} PubDate={PubDate} ModDate={ModDate}>
+<main id="article-body" class="w-full max-w-6xl bg-[#1e1e1e] px-16 pb-[60px] border-l-[1px] border-[#3c3c3c]">
+<h1>Mental Health</h1>
+    <ul class="tags mb-0 flex flex-wrap gap-2 my-0 w-full justify-end">
+        <li class="mb-2 text-sm">📰 Creation date: {PubDate.toString().slice(0,10)}</li>
+
+{ModDate && <li class="mb-2 text-sm">✏️Last updated: {ModDate.toString().slice(0,10)}</li>}
+    </ul>
+<img class="profile-picture max-w-full h-auto" src="/images/mental-health.jpg" alt="Mental Health" />
+<h2>Contents</h2>
+<MainToc />
+<h2>Overview</h2>
+<p>The aim is to strengthen health awareness by enhancing mental wellbeing.
+<br>
+Pursuing happiness necessitates both <a href="/info-literacy/" class="link">information literacy</a> and improved mental health.
+</p>
+<h2>Articles</h2>
+<h3>Strengthening Mental Health Through Thought Patterns</h3>
+<span>Tags: <a href="/tags/Thought" class="link">Thought</a></span>
+<ul class="menu-list">
+<li><a href="/mental-health/sns-sos">The Invisible SOS Signals Appearing on SNS</a></li>
+<li><a href="/mental-health/sns-sos2">Ordinary-Looking Sentences with Hidden Meanings - The Invisible SOS Signals Appearing in SOS Messages</a></li>
+</ul>
+<h3>Personal Experiences</h3>
+<span>Tags: <a href="/tags/Experiences" class="link">Experiences</a></span>
+<ul class="menu-list">
+<li><a href="/mental-health/schizophrenia">The World of Delusions as Seen by Someone with Schizophrenia (Includes Logs)</a></li>
+<li><a href="/mental-health/journaling">Find Meditation Tedious? Introducing Writing Meditation Through My Own Experience!</a></li>
+<li><a href="/mental-health/vps-ghost">A Patient's Record of Setting Up a VPS and Battling Ghost During Protective Hospitalisation</a></li>
+</ul>
+<h3>Mini Column</h3>
+<span>Tags: <a href="/tags/Mini-Columns" class="link">Mini Columns</a></span>
+<ul class="menu-list">
+<li><a href="/mental-health/serotonin">[Sad News] Serotonin: ‘It's a bit winter, so I'm taking a break.’</a></li>
+</ul>
+</main>
+</Layout>

@@ -1,0 +1,32 @@
+---
+import Layout from "../../layouts/Layout.astro";
+const allPosts = Object.values(import.meta.glob('../*/*.md', { eager: true }));
+const tags = [...new Set(allPosts.map((post: any) => post.frontmatter.tags).flat())];
+const pageTitle = "Tags List";
+---
+<Layout pageTitle={pageTitle}>
+      <main class="w-full max-w-6xl bg-[#1e1e1e] pb-[60px] px-16 border-l-[1px] border-[#3c3c3c]">
+    <h1>Tags List</h1>
+    <p>This is the page listing all tags.</p>
+
+<h2>Available Tags</h2>
+
+  <ul class="tags">
+    {tags.map((tag) => (
+      <li class="tag"><a href={`/tags/${tag}`}>{tag}</a></li>
+    ))}
+  </ul>
+  <style>
+
+  .tags {
+  }
+
+  .tag {
+    margin: 4px;
+    padding: 6px 12px;
+  }
+</style>
+              <a href="/" class="inline-block mt-6 px-6 py-3 bg-gray-700 hover:bg-gray-600 text-white transition-colors">Return to Home</a>
+
+    </main>
+</Layout>

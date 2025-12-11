@@ -1,0 +1,167 @@
+---
+import "../styles/global.css";
+import Footer from '@components/Footer.astro';
+import Sidebar from '@components/Sidebar.astro';
+import Sp from '@components/Sp.astro';
+import StructuredBreadcrumbs from '@components/Breadcrumbs.astro';
+import { siteUpdates } from "../data/update";
+const { pageTitle, PubDate, ModDate } = Astro.props;
+const isIndex = Astro.url.pathname === "/";
+const isThanks = Astro.url.pathname === "/thanks/";
+const isMentalHealth = Astro.url.pathname === ("/mental-health/");
+const isInfoLiteracy = Astro.url.pathname === ("/info-literacy/");
+const isBlog = Astro.url.pathname === ("/blog/");
+const isPodcast = Astro.url.pathname === ("/podcast/");
+const isUpdates = Astro.url.pathname === ("/updates/");
+const isTags = Astro.url.pathname === ("/tags/");
+const isUpdatesDetail = Astro.url.pathname.startsWith("/updates/");
+const isTag = Astro.url.pathname.startsWith("/tags/");
+const title = isIndex ? "NAOMINA121" : pageTitle + " | NAOMINA121";
+const canonicalURL = new URL(Astro.url.pathname, 'https://en.naomina121.com');
+const mainURL = new URL(Astro.url.pathname, 'https://naomina121.com');
+const ogpImageURL = isMentalHealth ? new URL('/images/mental-health.jpg', canonicalURL) : isInfoLiteracy ? new URL('/images/information-literacy.jpg', canonicalURL) : isBlog ? new URL('/images/blog2.webp', canonicalURL) : isPodcast ? new URL('/images/podcast.jpg', canonicalURL) : isPodcast ? new URL('/images/obsiedian_onsei.jpg', canonicalURL) : new URL('/images/nao2.jpg', canonicalURL);
+const description = isIndex
+  ? "This site is the official site of Nao. It provides information such as blogs, profiles, and activity bases."
+  : "This page is about " + pageTitle + ".";
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "naomina121",
+  "url": "https://en.naomina121.com",
+  "description": description,
+};
+
+const pageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": pageTitle,
+    "description": "This page is about " + pageTitle + ".",
+    "url": canonicalURL.toString(),
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "naomina121",
+      "url": "https://en.naomina121.com"
+    },
+    ...(PubDate && { "datePublished": PubDate }),
+    ...(ModDate && { "dateModified": ModDate }),
+  };
+const baseUrl = Astro.site?.toString().replace(/\/$/, "") ?? "";
+
+const infoSchema = {
+  "@context": "https://schema.org",
+  "@type": "ItemList",
+  "itemListElement": siteUpdates.map((update, index) => ({
+    "@type": "ListItem",
+    "position": index + 1,
+    "item": {
+      "@type": "BlogPosting",
+      "headline": update.title,
+      "datePublished":new Date(update.date).toISOString(),
+      "description": update.content,
+      "url": `${baseUrl}/updates/${update.slug}`,
+      "author": {
+        "@type": "Person",
+        "name": "Nao",
+        "url": "https://en.naomina121.com/profile/about"
+      },
+      "image": {
+        "@type": "ImageObject",
+        "url": `${baseUrl}/images/nao2.jpg`
+      },
+    },
+  })),
+};
+
+const breadcrumbItems = isIndex
+  ? [{ name: 'Home', item: Astro.site.origin + '/' }]
+  : isUpdates
+  ? [
+      { name: 'Home', item: Astro.site.origin + '/' },
+      { name: 'Updates', item: Astro.site.origin + '/updates/' },
+  ]
+  : isUpdatesDetail
+  ? [
+      { name: 'Home', item: Astro.site.origin + '/' },
+      { name: 'Updates', item: Astro.site.origin + '/updates/' },
+      { name: pageTitle, item: canonicalURL.toString() }
+    ]
+:isTags?[
+      { name: 'Home', item: Astro.site.origin + '/' },
+      { name: 'Tag List', item: Astro.site.origin + '/tags/' }
+]
+  : isTag
+  ? [
+      { name: 'Home', item: Astro.site.origin + '/' },
+      { name: 'Tag List', item: Astro.site.origin + '/tags/' },
+      { name: pageTitle, item: canonicalURL.toString() }
+    ]
+  : [
+      { name: 'Home', item: Astro.site.origin + '/' },
+      { name: pageTitle, item: canonicalURL.toString() }
+    ];
+
+const isContact = Astro.url.pathname.startsWith("/contact/");
+const ga4TrackingCode = `
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-28TE1TDYKD"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-28TE1TDYKD');
+</script>
+`;
+---
+<!doctype html>
+<html lang="ja">
+  <head prefix="og: http://ogp.me/ns#">
+  <script is:inline src="https://www.google.com/recaptcha/api.js"></script>
+  <script is:inline>
+  function onSubmit(token) {
+    let form = document.getElementById('contactForm');
+    if(form.reportValidity()) {
+      form.submit();
+    }
+  }</script>
+
+    <!-- Google tag (gtag.js) -->
+    <Fragment set:html={ga4TrackingCode} />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta property="og:title" content={title} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={canonicalURL.toString()} />
+    <meta property="og:image" content={ogpImageURL.toString()} />
+    <meta property="og:description" content={description} />
+    <meta property="og:site_name" content="naomina121" />
+    <meta property="og:locale" content="ja_JP" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@naomina121">
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description" content={description}>
+    <meta name="twitter:image" content={ogpImageURL.toString()}>
+    {isThanks && <meta name="robots" content="noindex,nofollow" />}
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
+    <script type="application/ld+json" set:html={JSON.stringify(infoSchema)} />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="canonical" href={canonicalURL.toString()} />
+    <link rel="alternate" hreflang="ja" href={mainURL.toString()} />
+    <link rel="alternate" hreflang="en" href={canonicalURL.toString()} />
+    <link rel="alternate" hreflang="x-default" href={mainURL.toString()} />
+    <meta name="generator" content={Astro.generator} />
+    <title>{isIndex ? pageTitle : `${pageTitle} | NAOMINA121`}</title>
+  </head>
+  <body>
+    <div class="container flex justify-between items-start align-top mx-auto max-w-[1200px]">
+    <Sp />
+    <Sidebar />
+    <slot />
+    </div>
+    <StructuredBreadcrumbs items={breadcrumbItems} />
+    <Footer />
+  </body>
+</html>
+

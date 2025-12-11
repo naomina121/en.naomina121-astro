@@ -1,0 +1,82 @@
+---
+const pageTitle = "NAOMINA121";
+import Layout from "../layouts/Layout.astro";
+import { siteUpdates } from "../data/update";
+const latestUpdates = [...siteUpdates]
+  .sort((a, b) => b.date.localeCompare(a.date)) // 新しい順
+  .slice(0, 3);
+const PubDate = "2025-12-01";
+const ModDate = "2025-12-11";
+---
+
+<Layout pageTitle={pageTitle} PubDate={PubDate} ModDate={ModDate}>
+<main class="w-full max-w-6xl bg-[#1e1e1e] pb-[60px] px-16 border-l-[1px] border-[#3c3c3c]">
+<img class="profile-picture max-w-full h-auto" src="/images/nao2.jpg" alt="Nobody Is Perfect" />
+<h2>Introduction</h2>
+<p>This site is the official website of Nao, operated by <a href="/profile/about" class="link">Nao</a>.</p>
+<h2>Published Content</h2>
+<p>This section introduces the content available on the site. </p>
+<table class="m">
+<thead>
+<tr>
+<th>Item</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Profile</td>
+<td>Nao's basic information</td>
+</tr>
+<tr>
+<td>Mental Health</td>
+<td>Contains information on mental health compiled by Nao. </td>
+</tr>
+<tr>
+<td>Information Literacy</td>
+<td>Contains information on information literacy compiled by Nao. </td>
+</tr>
+<tr>
+<td>Nao's Blog</td>
+<td>This is Nao's blog. </td>
+</tr>
+<tr>
+<td>Nao's Activity Bases</td>
+<td>Contains Nao content from external sites. </td>
+</tr>
+</tbody>
+</table>
+<h2>Announcements</h2>
+<div class="box">
+  <h3 style="font-size:18px; border-bottom:1px solid #727272; margin:0 0 10px 0px; padding: 0px 0px 10px;">
+    📰Update History
+  </h3>
+
+<p>We aim for a sustainable update frequency, targeting a pace of <u class="orange">once a week</u> for article updates. </p>
+  <p>Should you have any questions or feedback regarding the content of our articles, please contact us via the <a href="/contact/" class="link">contact page</a>. </p>
+
+<ul style="margin-top:10px; font-weight:600; border-top:1px solid #727272; padding-top:10px;">
+    {latestUpdates.map((update) => (
+      <li class="my-1">
+
+<time class="text-sm orange" datetime={update.date}>{update.date}</time>
+        {" : "}
+        <a href={`/updates/${update.slug}`} class="text-[#c9c9c9] hover:underline hover:underline-offset-4">
+          {update.title}
+
+</a>
+      </li>
+    ))}
+  </ul>
+  <p style="margin-top:10px; text-align:right;">
+    <a href="/updates/" class="gold underline">→ View all announcements</a>
+  </p>
+</div>
+<h2>When you feel like supporting Nao</h2>
+<p>Nao will be delighted by your support!</p>
+<div class="coffe">
+<a href="https://buymeacoffee.com/naomina121" class="button">☕ Support with coffee</a>
+</div>
+</main>
+</Layout>
+

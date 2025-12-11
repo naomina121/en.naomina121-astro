@@ -1,0 +1,190 @@
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: 'Invisible SOS Appearing on SNS'
+pubDate: 2025-12-11
+description: 'To view matters from multiple angles may well require an understanding of the context behind the writing one encounters on a daily basis.'
+author: 'Nao'
+image:
+    url: '/images/sns-sos.jpg'
+    alt: 'Visual representations of unseen SOS signals appearing on social media'
+tags: ["Mental-Health","SNS-Invisible-SOS","Thought"]
+---
+
+To be perfectly honest, lol
+
+I'm not particularly good at writing!
+
+It's difficult to write well, and I'm grateful that people still read what I write.
+
+Now, to the main point: when I'm scrolling through social media, I occasionally come across posts saying things like ‘I want to
+
+disappear’ or ‘I'm sorry I was born’.
+
+Hearing those voices on social media,
+
+Ah... so it wasn't just me, I find myself suddenly feeling relieved.
+
+---
+
+When using social media, you realise SOS signals are hidden within posts.
+
+For instance, have you ever seen posts like these?
+
+- ‘**I'm sorry for being born**’
+- ‘**I want to vanish**’
+- ‘**I can't do my job, I'm finished.**’
+
+People tend to overlook these voices precisely when they're living healthily.
+
+Social media especially has a tendency to recommend content
+
+based on what you usually show interest in or give a thumbs-up to.
+
+---
+
+So, what about me?
+
+Well, as you know, I do see these kinds of posts.
+
+Therefore, I suppose I might have a rather sensitive side.
+
+## The Background of SOS Signals on SNS
+
+On SNS, posts with many sympathetic comments tend to attract more attention.
+
+For instance, when it seems others share the same feelings and sympathetic comments pile up, it can become aggressive.
+
+When you're stretched thin and suffering yourself, you can't possibly wish for others to be happy,
+
+**thinking how immature I am.**
+
+Even though you don't want to hurt them, you just can't hold back the anger.
+
+Unfortunately, I've been there myself.
+
+Perhaps it might happen again in the future...
+
+However, I believe that precisely during such times, becoming aware of your own heart's SOS signals can lead to change.
+
+Don't go spouting off like you're so wise, Nao, right? lol
+
+## Why Do SOS Signals Appear on SNS?
+
+The background to SOS signals appearing on SNS is influenced by the stress and loneliness felt in everyday life.
+
+Normally, I wouldn't get so irritated by such things.
+
+Why is that?
+
+The more stretched we are, the more signs we seek within ourselves for help.
+
+This creates a dynamic where not only the person seeking help, but also those who empathise with them, simultaneously harbour hidden
+
+cries for help within their own hearts.
+
+I myself have made empathetic comments without intending to hurt anyone.
+
+I was already in a state where I'd lost my mental space and couldn't see what was around me.
+
+Being able to empathise means you also understand the feelings of someone who is hurting.
+
+When I see such posts whilst feeling overwhelmed, I inevitably become emotional.
+
+**Yes, Nao has had that experience too.**
+
+Normally, I keep my distance from others, but it's precisely at such times that I find similar posts on social media.
+
+## The Hidden Truth Behind ‘I'm Sorry I Was Born’
+
+Deeply hurtful words conceal a reason.
+
+Typically, healthy individuals needn't contemplate matters of life and death.
+
+The very act of pondering such things signals an emergency where survival instincts feel threatened.
+
+‘I'm sorry for being born’ – but perhaps the words they truly longed to hear
+
+were ‘Thank you for being alive,’ spoken in a place that offered that?
+
+No one is born to suffer.
+
+The crushing weight of the fact that the world was cruel enough to cause you such anguish,
+
+and that society has driven you to seek solace solely on social media – that is the true abnormality.
+
+## How to overcome it? Awareness and practice of “here and now”
+
+- **Solution**: Cultivating the habit of focusing on “here and now” is crucial.
+
+- **Focus points**: Things you touch, smells, sensations of wind or air, tastes, sounds you hear, etc.
+
+Those trapped in suffering tend to fixate on the past.
+
+**If you find yourself unable to concentrate on the present and truly wish to vanish**
+
+**Recalling the sensations of the present moment is an urgent and vital necessity.**
+
+Finding something you can do right now, something that helps you focus here and now,
+
+can provide a hint that might offer some help in times of need.
+
+Forest bathing is often cited as being effective,
+
+and the reason is that while connecting with nature is beneficial, it also provides an environment that makes focusing on the present
+easier.
+
+It is also known by another name: forest therapy.
+
+Personally, when I can connect with nature or get outdoors, I feel liberated. Why not give it a try, even if you're sceptical?
+
+However, if you're unable to move due to illness like depression, please don't push yourself.
+
+It's vital to do what you can within the limits agreed with your doctor.
+
+When things get really tough, remember this technique of focusing on “the here and now”. It's worth keeping in mind.
+
+## Summary so far:
+
+<div class="box2">
+
+- The healthier we are, the less we hear the voices of those on the brink.
+- When we're hurt by our past or feel mentally stretched, we tend to seek out posts on social media that offer empathy.
+- Due to the nature of social media, comments seeking empathy can sometimes, through comparison with others, lead to highly aggressive remarks.
+- The true sentiment behind saying ‘I'm sorry for being born’ is a desire for a safe environment where one can feel they belong.
+- As a solution, focusing on the “here and now” can help reduce fixation on the past.
+
+</div>
+
+---
+
+I wrote this article because I experienced bullying in the past and often felt I wanted to disappear.
+Amidst that,
+
+I encountered the idea of “focusing on the here and now”.
+
+Even if I couldn't forget completely, noticing the air, light, and smells around me
+allowed me to return to the “present” just a little.
+
+I wrote this hoping this method might offer a small support to someone's heart.
+Finally, if you have the mental space to consider this SOS, please think about when you can regain yourself.
+
+The hint should be there.
+
+If you need professional help, please don't hesitate to seek it.
+
+## The Continuation of This Article
+
+Or so it seems, but this article has a continuation.
+
+I wrote it in a slightly—no, quite—malicious way.
+
+---
+
+## Next Time Preview: ‘[Ordinary-Looking Sentences with Hidden Meanings - The Invisible SOS Signals Appearing in SOS Messages](/mental-health/sns-sos2/)’
+
+↑ Click the title to see it
+
+Actually, this text is based on scientific data. So why didn't I include it this time?
+
+If you're curious about why I wrote it this way, please do check out the [next instalment](/mental-health/sns-sos2/).
+Also, please don't get angry lol

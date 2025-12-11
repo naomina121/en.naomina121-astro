@@ -1,0 +1,169 @@
+---
+layout: ../../layouts/MarkdownPostLayout.astro
+title: 'I Stopped Thinking, Humankind Has No Future'
+pubDate: 2025-12-11
+description: 'Explaining the dangers of ceasing to think. This article discusses how organising thoughts through writing can enhance memory and understanding, and introduces Markdown as a tool for thought organization.'
+author: 'Nao'
+image:
+    url: '/images/thought.jpg'
+    alt: 'Image of a person crossing against a red light'
+tags: ["Information-Literacy","Thought"]
+---
+
+Crossing a red light alone is frightening.
+
+But crossing together isn't frightening at all.
+
+Having been told that, how many things have we chosen without thinking?
+
+Looking at the eye-catching image displayed earlier, what did you think?
+
+Did it seem fun?
+
+Did it feel reassuring?
+
+Then, let me ask you just one thing.
+
+---
+
+**‘Did you even notice that the signal was “red”?’**
+
+---
+
+## If I'm a fool, then why don't I think? That's talent.
+
+Information changes with the times.
+
+Knowledge applies a filter.
+
+The more information people have, the more they hesitate.
+
+But if you consider yourself foolish, you are sufficiently wise.
+
+Why? Because it allows you to expand your knowledge.
+
+Humans are creatures who look to the future.
+
+Not discarding any possibility
+shapes the future of people.
+
+In other words, this proves that the future lies in flexible thinking.
+
+## How would you answer this question?
+
+Those who write blogs regularly tend to have more organised thoughts.
+
+And the more organised your thoughts become, the better your memory gets.
+
+Why do you think that is?
+
+First, before reading on, take just one minute to think about it
+and try to express it in your own words.
+
+As a hint, I've included an image in the next section.
+
+---
+### 💡Hint
+
+You might use this image as a prompt, or come up with your own solution – either way is interesting.
+
+<img src="/images/thinking.jpg" alt="Text stating “Those who cease to think have no future”, alongside an illustration of a person accelerating on skis" class="my-4 w-full max-w-md"/>
+
+## Whether right or wrong, your own words become knowledge
+
+It's not about what's correct; the question is what you were able to think.
+
+There's no need for a correct answer to the response you just formulated in your own words.
+
+What matters is thinking through your own reasoning and formulating a hypothesis.
+History changes,
+and people's answers aren't always correct based on their judgement at the time.
+
+So, what do you think?
+
+As you read this article now,
+you should know.
+
+You began reading it because you sensed the danger of thought cessation.
+
+## People think even when they don't think
+
+Did you know?
+We are said to
+repeat tens of thousands of thoughts every day.
+
+And we do so unconsciously.
+
+So why do we enter a state called thought cessation?
+
+Let's reverse the perspective.
+
+Perhaps it's not a lack of thought,
+
+but rather our minds becoming so saturated with thought that we can no longer think?
+
+**In other words, an immense, countless amount of information is racing through our brains.**
+
+So why
+is there such a need to think?
+
+Imagine this.
+
+## Your thoughts become clearer when you put them into words
+
+You can't think of anything.
+
+You can't come up with ideas.
+
+No, it's not that you can't think of ideas.
+
+It's because your thoughts are scattered, the connections between pieces of information are weak, and you can't draw them out.
+
+To do that, you need to organise this information.
+
+Our brains are instinctively structured to feel more secure with “organised things” than with raw thoughts.
+
+What does that mean?
+
+Essentially, when outputting thoughts,
+you can't just jot down unorganised information in a haphazard manner.
+
+So, let me ask you this.
+
+Why does teaching others enhance memory retention?
+
+The answer might not come immediately.
+
+But as you read on,
+you should be getting closer to it.
+
+## Questions arise from daily life – use Markdown
+
+If you're wondering what Markdown is, look it up.
+
+Markdown is usable in daily life.
+
+1. **Simple structuring (i.e., low cognitive load)**
+2. **Allows you to see the flow of your thoughts while writing**
+3. **Retains logical structure even when revisited later**
+
+What do you think?
+
+This text is composed in Markdown.
+
+To help you organise your thoughts,
+
+it should be designed simply, free from unnecessary noise.
+
+Markdown is the perfect tool
+
+to answer the question I posed earlier.
+
+## Finally
+
+Throughout this process, you've likely looked up anything unclear
+and summarised it in your own words.
+
+Each step will deepen your understanding.
+
+**And finally, one more question: why did you read this article?**
