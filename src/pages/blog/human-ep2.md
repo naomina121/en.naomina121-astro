@@ -7,7 +7,7 @@ author: "Nao"
 image:
     url: "/images/nobody-perfect.webp"
     alt: "Image illustrating that nobody's perfect"
-tags: ["Blog", "Nobody's perfect", "Relationships"]
+tags: ["Blog", "Relationships"]
 ---
 
 There are some tweets I wrote when I was ill and not quite myself.
