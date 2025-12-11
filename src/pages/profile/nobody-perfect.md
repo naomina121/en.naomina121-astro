@@ -2,6 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Nobody is Perfect'
 pubDate: 2025-12-11
+modDate: 2025-12-12
 description: 'This is my creed page.'
 author: 'Nao'
 image:
@@ -40,6 +41,7 @@ And we know that everyone is not.
 </div>
 
 ### I'm the one who often says there's no such thing as a perfect person
+
 <img src="/images/nobody_1.jpg" alt="Nao's profile picture" class="w-full" />
 
 This is a tweet from 2023.
@@ -76,8 +78,11 @@ Considering this, I believe it is better to be aware that humans are fundamental
 
 > **About the Milgram Experiment**: This is the famous experiment on ‘obedience to authority’ conducted by Yale University psychologist Stanley Milgram in 1963. In the experiment, subjects were assigned the role of “teacher” and instructed to administer electric shocks of increasing intensity to a “student” (actually a fellow experimenter) for each incorrect answer. Astonishingly, the results showed that 60 to 80 per cent of ordinary people complied with the instructions from the experimenter, an authority figure, continuing to administer shocks despite experiencing pangs of conscience and even when the subject cried out in pain. This experiment provides crucial psychological insights into why atrocities like the Holocaust during the Nazi era were possible.
 I believe it is better to harbour a sense of crisis, thinking “I might become like this”, rather than thinking “I would never become like that”.
+
 For it is precisely those who believe they cannot be deceived who are most likely to be deceived.
+
 ### The Dark Side of Justice Addiction
+
 You may be familiar with the term “justice addiction”.
 
 As the term suggests, it describes becoming so intoxicated by justice that one feels compelled to punish those who disrupt group rules.
@@ -101,9 +106,11 @@ To prevent becoming overly infused with the belief that one's own thoughts are c
 I would like to propose three things.
 
 ---
+
 1. **<span class="green2">Always question your own thoughts and increase opportunities to encounter opinions differing from your own. </span>**
 2. **<span class="green2">Refrain from viewing things strictly through the lens of right or wrong; always leave room for them to be mere hypotheses. </span>**
 3. **<span class="green2">Cultivate a degree of tolerance, recognising that even if others are mistaken, it is, to some extent, only human. </span>**
+
 ---
 
 This applies equally when you yourself are mistaken.

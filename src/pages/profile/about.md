@@ -2,6 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'About Nao'
 pubDate: 2025-12-11
+modDate: 2025-12-12
 description: "This is Nao's profile page."
 author: 'Nao'
 image:
@@ -20,6 +21,7 @@ tags: ["Profile", "Nao", "About"]
 
 
 ## Basic Information
+
 <ul>
 <li>Name: Nao</li>
 <li>Gender: Human</li>
@@ -37,41 +39,53 @@ tags: ["Profile", "Nao", "About"]
 </ul>
 
 ## Medical History
+
 - Schizoaffective Disorder
 - Neurosis
 - Keratosis (Intractable Skin Disease)
 - Developmental Disorders (ASD, ADHD)
+
 ## Hobbies
+
 - Image Creation
 - Programming
 - Writing
 - Analysis
 - Video Production
+
 ## Author Page
+
 <ul>
 <li><a class="link" href="https://www.amazon.co.jp/stores/naomina121/author/B0FWB5GP5G" target="_blank" rel="noopener">Amazon Author Page</a></li>
 </ul>
 
 ## Work History and Skills
+
 - Former Web Designer
 - Former Frontend Engineer (though I did build development environments myself back in the days before Docker, using VirtualBox + Vercel + Laravel + PHP + MySQL)
 - Former Sales Role Experience
 - Former Administrative Role Experience
+
 ### Personal Development Experience
+
 These are personal development projects published on Qiita and GitHub.
+
 <ul>
 <li><a class="link" href="https://qiita.com/naomina121">Qiita</a></li>
 <li><a class="link" href="https://github.com/naomina121">GitHub</a></li>
 </ul>
 
 ### Notion API + Next.js + TypeScript Blog
+
 Utilising the Notion API, I implemented search functionality and created and published a blog using Next.js's ISR.
+
 <ul>
 <li><a class="link" href="https://dev.naomina121.com/">Programming Site</a></li>
 </ul>
 
 
 ### Notion Plugin Designer
+
 <ul>
 <li><a class="link" href="https://marketplace.visualstudio.com/items?itemName=naomina121.vscodetonotion">Notion Plugins</a></li>
 </ul>

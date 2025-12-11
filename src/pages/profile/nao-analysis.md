@@ -2,6 +2,7 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Nao Analysis'
 pubDate: 2025-12-11
+modDate: 2025-12-12
 description: 'This is my profile analysis page.'
 author: 'Nao'
 image:
@@ -10,7 +11,7 @@ image:
 tags: ["Profile", "Nao", "Analysis"]
 ---
 
-CliftonStrengths
+## CliftonStrengths
 
 With top strengths largely being strategic, there is a high tendency to gather information and analyse its accuracy. This style involves feeling a sense of responsibility for disseminating information, refining ideas in a better form, and communicating responsibly.
 
