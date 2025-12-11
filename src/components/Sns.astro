@@ -207,13 +207,13 @@ const Title = frontmatter.title;
         const urlToCopy = urlInput.value;
         navigator.clipboard.writeText(urlToCopy)
             .then(() => {
-                copyBtn.textContent = 'コピーしました！';
+                copyBtn.textContent = 'URL Copied!';
                 setTimeout(() => {
-                    copyBtn.textContent = 'URLをコピー';
+                    copyBtn.textContent = 'Copy URL';
                 }, 2000);
             })
             .catch(err => {
-                console.error('URLのコピーに失敗しました:', err);
+                console.error('Failed to copy URL:', err);
                 });
     });
 });
