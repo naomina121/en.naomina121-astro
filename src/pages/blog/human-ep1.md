@@ -25,7 +25,7 @@ person is the only one for me’ – unable to blame the other and left to bear 
 
 Moreover, driven by a constant fear of loss, they begin to monitor the other person.
 
-This is precisely why the lyrics of ‘*<font color=’#ceda29‘>*Every Breath You Take</font>’ (Japanese title: ‘Mitsumete Itai’ - ‘I
+This is precisely why the lyrics of ‘<font color='#ceda29'>*Every Breath You Take</font>’ (Japanese title: ‘Mitsumete Itai’ - ‘I
 
 Want to Keep Watching You’) endlessly repeat the idea of constant surveillance.
 
