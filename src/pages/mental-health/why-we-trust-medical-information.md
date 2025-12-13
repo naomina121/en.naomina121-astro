@@ -52,7 +52,7 @@ This is precisely why, should medical professionals or specialists disseminate m
 
 ## Recommended reading alongside this article
 
-「[Why do search engines and AI select “dubious medical articles”? ― The Limitations of Algorithms and SEO ―](/info-literacy/how-search-and-ai-evaluate-medical-content)"」
+「[Why do search engines and AI select “dubious medical articles”? ― The Limitations of Algorithms and SEO ―](/info-literacy/how-search-and-ai-evaluate-medical-content)」
 
 The next article will explore the technical limitations of how misinformation, exploiting gaps in human psychology, gets amplified and prioritised by AI and search algorithms.
 
