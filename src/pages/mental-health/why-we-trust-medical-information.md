@@ -10,6 +10,10 @@ image:
 tags: ["Mental-Health","Information-Literacy"]
 ---
 
+<div class="box">
+  <strong>Note:</strong> ※Due to the nature of this article, which deals with search algorithms and AI evaluation structures, its composition and terminology have undergone technical review by AI.
+</div>
+
 This time, we consider what harm can arise when doctors or professionals mistakenly disseminate medical information.
 
 ## Conclusion: Medical Misinformation is Serious Enough to Cost Lives

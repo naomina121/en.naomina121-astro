@@ -11,6 +11,10 @@ image:
 tags: ["Information-Literacy","Mental-Health"]
 ---
 
+<div class="box">
+  <strong>Note:</strong> ※This article was created using AI-generated text in part.
+</div>
+
 This time, we will discuss the technical limitations of how misinformation, exploiting gaps in human psychology, is amplified and evaluated by AI and search algorithms.
 
 ## Conclusion: AI and search algorithms have different criteria for evaluating correct information than humans
