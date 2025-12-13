@@ -292,6 +292,15 @@ blockquote:after {
   border-right: solid 15px #433a0b;
 }
 
+#article-body ol {
+  list-style-type: decimal-leading;
+}
+
+#article-body ol li {
+  margin-left: 20px;
+  line-height: 2;
+}
+
 #article-body h1 {
   line-height: 1.7;
 }
