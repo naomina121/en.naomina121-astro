@@ -45,14 +45,14 @@ information than to question it, leading to the misinformation being embraced as
 
 Yet nothing is more sinful than medical misinformation, which can cost human lives. Let us examine how such falsehoods have harmed people's health in the past.
 
-- **Misinformation about the novel coronavirus vaccine** During the pandemic, misinformation and fake news flooded social media. For instance, a study published in the [American Journal of Tropical Medicine and Hygiene](https://www.google.com/search?q=http://www.ajtmh.org/content/journals/10.4269/ajtmh.20-0812%3Bjsessionid%3D-ETrfB53Hw7IIHnlp2BbSu4i.ip-10 -241-1-122) reported serious health consequences, including over 800 deaths and approximately 5,800 hospitalisations worldwide, due to misinformation such as ‘drinking specific disinfectants (methanol or alcohol-based cleaners) will cure you’.
+- **Misinformation about the novel coronavirus vaccine** During the pandemic, misinformation and fake news flooded social media. For instance, a study published in the [American Journal of Tropical Medicine and Hygiene](http://www.ajtmh.org/content/journals/10.4269/ajtmh.20-0812%3Bjsessionid%3D-ETrfB53Hw7IIHnlp2BbSu4i.ip-10 -241-1-122) reported serious health consequences, including over 800 deaths and approximately 5,800 hospitalisations worldwide, due to misinformation such as ‘drinking specific disinfectants (methanol or alcohol-based cleaners) will cure you’.
 - **Misinformation about cancer treatment** Information denying standard treatments and promoting ineffective folk remedies proliferates online. Consequently, cases where cancer patients with a potential chance of recovery refuse appropriate treatment, leading to delayed intervention, remain unabated.
 
 This is precisely why, should medical professionals or specialists disseminate medical misinformation, the impact becomes an issue of immeasurable gravity.
 
 ## Recommended reading alongside this article
 
-「[Why do search engines and AI select “dubious medical articles”? ― The Limitations of Algorithms and SEO ―](https://www.google.com/search?q=/info-literacy/how-search-and-ai-evaluate-medical-content)"
+「[Why do search engines and AI select “dubious medical articles”? ― The Limitations of Algorithms and SEO ―](/info-literacy/how-search-and-ai-evaluate-medical-content)"
 
 The next article will explore the technical limitations of how misinformation, exploiting gaps in human psychology, gets amplified and prioritised by AI and search algorithms.
 
