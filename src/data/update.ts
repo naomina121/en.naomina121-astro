@@ -2,8 +2,8 @@ export const siteUpdates = [
     {
         date: '2025-12-14',
         slug: "updates-structured-data-ui-improvements",
-        title: "We have implemented structural improvements and UI enhancements to the announcements list.",
-        content: "We have added structured data to the announcements list page and improved the UI. Announcements are now displayed separately by category, enhancing visibility and convenience.We updated the notices list by adding categories and improving its structure and UI.As part of this update, the display and classification of past notices were adjusted. The content of individual notices has not been changed.",
+        title: "Announcements list: structural and UI improvements",
+        content: "We added structured data to the announcements list page and improved its UI by introducing categories. As part of this update, past notices were reclassified to improve readability. The content of individual notices has not been changed.",
         category: "Technical"
     },
       {
@@ -40,7 +40,7 @@ export const siteUpdates = [
 {date: '2025-12-14',
           updatedAt:'2025-12-14',
       slug: "info-literacy-article-published",
-      title: "New article ‘Why do search engines and AI select 'dubious medical articles”?’ published",
+      title: "New article published: Why do search engines and AI select dubious medical articles?",
       content: "A new article on information literacy has been published.It explains the technical limitations of how search engines and AI evaluate and amplify misinformation.",
       category: "Article"
   },
@@ -56,7 +56,7 @@ export const siteUpdates = [
       date: '2025-12-12',
             updatedAt:'2025-12-14',
       slug: "corrected-disclaimer-date-notation-error",
-      title: "We have immediately corrected an error in the date notation within the disclaimer,",
+      title: "Corrected an error in the disclaimer date notation",
       content: "We have immediately corrected an error in the date notation within the disclaimer. To prevent recurrence, we will implement a checklist for content verification."
 ,category: "Technical"
     }
@@ -66,7 +66,7 @@ export const siteUpdates = [
             updatedAt:'2025-12-14',
       slug: "fixed-url-description-error-in-blog-tags",
       title: "Fixed URL description error in blog tags",
-      content: "Fixed URL errors in blog tagss.",
+      content: "Fixed URL description errors in blog tags.",
       category: "Technical"
   },
   {
