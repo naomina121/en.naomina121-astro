@@ -18,16 +18,16 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://en.naomina121.com');
 const mainURL = new URL(Astro.url.pathname, 'https://naomina121.com');
 const ogpImageURL = new URL(frontmatter.image.url, canonicalURL);
 const websiteSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org/",
   "@type": "WebSite",
   "name": "naomina121",
-  "url": "https://en.naomina121.com",
+  "url": "https://en.naomina121.com/",
   "description": "This site is the official site of Nao. It provides information such as blogs, profiles, and activity bases.",
 };
-  const siteUrl = "https://en.naomina121.com";
+  const siteUrl = "https://en.naomina121.com/";
   let title = frontmatter.title;
   const pageSchema = {
-    "@context": "https://schema.org",
+    "@context": "https://schema.org/",
     "@type": "BlogPosting",
     "headline": title,
     "description": frontmatter.description,
@@ -60,13 +60,13 @@ const bookSchema = {
   "alternateName": "naomina121",
   "url": "https://en.naomina121.com/",
   "sameAs": [
-    "https://www.amazon.co.jp/stores/naomina121/author/B0FWB5GP5G"
+    "https://www.amazon.co.jp/stores/naomina121/author/B0FWB5GP5G/"
   ],
   "jobTitle": "Author"
 };
 
 const infoSchema = {
-  "@context": "https://schema.org",
+  "@context": "https://schema.org/",
   "@type": "ItemList",
   "itemListElement": siteUpdates.map((update, index) => ({
     "@type": "ListItem",
@@ -76,7 +76,7 @@ const infoSchema = {
       "headline": update.title,
       "datePublished": update.date,
       "description": update.content,
-      "url": `${baseUrl}/updates/${update.slug}`,
+      "url": `${baseUrl}/updates/${update.slug}/`,
     },
   })),
 };
