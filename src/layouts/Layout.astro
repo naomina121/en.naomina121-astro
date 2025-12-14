@@ -50,27 +50,69 @@ const baseUrl = Astro.site?.toString().replace(/\/$/, "") ?? "";
 
 const infoSchema = {
   "@context": "https://schema.org",
-  "@type": "ItemList",
-  "itemListElement": siteUpdates.map((update, index) => ({
-    "@type": "ListItem",
-    "position": index + 1,
-    "item": {
-      "@type": "BlogPosting",
-      "headline": update.title,
-      "datePublished":new Date(update.date).toISOString(),
-      "description": update.content,
-      "url": `${baseUrl}/updates/${update.slug}`,
-      "author": {
-        "@type": "Person",
-        "name": "Nao",
-        "url": "https://en.naomina121.com/profile/about"
-      },
-      "image": {
-        "@type": "ImageObject",
-        "url": `${baseUrl}/images/nao2.jpg`
-      },
-    },
-  })),
+  "@type": "WebPage",
+  "name": "Update Information List",
+  "description": "This is a list of update history, new articles, and announcements related to the operation of this site.",
+  "url": `${baseUrl}/updates`,
+  "inLanguage": "en",
+  "mainEntity": {
+    "@type": "ItemList",
+    "itemListOrder": "https://schema.org/ItemListOrderDescending",
+    "numberOfItems": siteUpdates.length,
+    "itemListElement": siteUpdates.map((u, i) => ({
+      "@type": "ListItem",
+      "position": i + 1,
+      "item": {
+        "@type": "CreativeWork",
+        "name": u.title,
+        "description": u.content,
+        "datePublished": `${u.date}T00:00:00+09:00`,
+        "dateModified": u.updatedAt ? `${u.updatedAt}T00:00:00+09:00` : `${u.date}T00:00:00+09:00`, // 更新日があれば優先
+        "url": `${baseUrl}/updates/${u.slug}`,
+        "image": `${baseUrl}/images/nao2.jpg`, // サムネがない場合のフォールバック
+        "author": {
+          "@type": "Person",
+          "name": "Nao",
+          "url": "https://naomina121.com/profile/about"
+        }
+      }
+    }))
+  }
+};
+const { update } = Astro.props;
+const articleSchema = !isUpdates && isUpdatesDetail && {
+  "@context": "https://schema.org",
+  "@type": "BlogPosting", // 更新の個別ページの汎用性はBlogPosting
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": `${baseUrl}/updates/${update.slug}`
+  },
+  "headline": update.title,
+  "description": update.content,
+  "image": {
+    "@type": "ImageObject",
+    "url": `${baseUrl}/images/nao2.jpg`,
+    "width": 1200,
+    "height": 630
+  },
+  "datePublished": `${update.date}T00:00:00+09:00`,
+  "dateModified": update.updatedAt ? `${update.updatedAt}T00:00:00+09:00` : `${update.date}T00:00:00+09:00`,
+  "inLanguage": "ja",
+  "author": {
+    "@type": "Person",
+    "name": "Nao",
+    "url": "https://naomina121.com/profile/about"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "naomina121",
+    "logo": {
+      "@type": "ImageObject",
+      "url": `${baseUrl}/images/naomina.jpg`,
+      "width": 600,
+      "height": 60
+    }
+  }
 };
 
 const breadcrumbItems = isIndex
@@ -145,7 +187,8 @@ const ga4TrackingCode = `
     <link rel="sitemap" href="/sitemap-index.xml" />
     <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
     <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
-    <script type="application/ld+json" set:html={JSON.stringify(infoSchema)} />
+    {isUpdates && <script type="application/ld+json" set:html={JSON.stringify(infoSchema)} />}
+    {!isUpdates && isUpdatesDetail && <script type="application/ld+json" set:html={JSON.stringify(articleSchema)} />}
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <link rel="canonical" href={canonicalURL.toString()} />
     <link rel="alternate" hreflang="ja" href={mainURL.toString()} />

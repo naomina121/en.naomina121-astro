@@ -1,5 +1,11 @@
 export const siteUpdates = [
       {
+      date: '2025-12-14',
+      slug: "structured-data-improved",
+      title: "We have improved the structure of our announcements",
+      content: "We have improved the structured data of our announcements. This allows search engines to more accurately understand the latest information.",
+  },
+      {
             date: '2025-12-14',
             slug: "disclaimer-updated",
             title: "Disclaimer Updated",
