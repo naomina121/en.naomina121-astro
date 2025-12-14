@@ -58,14 +58,30 @@ const infoSchema = {
         "author": {
           "@type": "Person",
           "name": "Nao",
-          "url": "https://naomina121.com/profile/about/"
+          "url": "https://en.naomina121.com/profile/about/"
         }
       }
     }))
   }
 };
 
-const pageSchema = isUpdates || !isUpdatesDetail ? infoSchema : {
+const { update } = Astro.props;
+
+const pageSchema = isUpdates || !isUpdatesDetail ? infoSchema : isUpdatesDetail ? {
+    "@context": "https://schema.org/",
+    "@type": "WebPage",
+    "name": pageTitle,
+    "description": update.content,
+    "url": canonicalURL.toString(),
+    "inLanguage": "en",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "naomina121",
+      "url": "https://en.naomina121.com/"
+    },
+    ...(PubDate && { "datePublished": PubDate }),
+    ...(ModDate && { "dateModified": ModDate }),
+}:{
     "@context": "https://schema.org/",
     "@type": "WebPage",
     "name": pageTitle,
@@ -81,7 +97,6 @@ const pageSchema = isUpdates || !isUpdatesDetail ? infoSchema : {
     ...(ModDate && { "dateModified": ModDate }),
   };
 
-const { update } = Astro.props;
 const articleSchema = !isUpdates && isUpdatesDetail && {
   "@context": "https://schema.org/",
   "@type": "BlogPosting", // 更新の個別ページの汎用性はBlogPosting
@@ -99,11 +114,11 @@ const articleSchema = !isUpdates && isUpdatesDetail && {
   },
   "datePublished": `${update.date}T00:00:00+09:00`,
   "dateModified": update.updatedAt ? `${update.updatedAt}T00:00:00+09:00` : `${update.date}T00:00:00+09:00`,
-  "inLanguage": "ja",
+  "inLanguage": "en",
   "author": {
     "@type": "Person",
     "name": "Nao",
-    "url": "https://naomina121.com/profile/about/"
+    "url": "https://en.naomina121.com/profile/about/"
   },
   "publisher": {
     "@type": "Organization",
