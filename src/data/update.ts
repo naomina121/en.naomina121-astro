@@ -1,5 +1,11 @@
 export const siteUpdates = [
       {
+            date: '2025-12-14',
+            slug: "disclaimer-updated",
+            title: "Disclaimer Updated",
+            content: "The disclaimer has been updated. We have added a statement clarifying that this blog does not endorse any specific treatments, philosophies, or products.",
+      },
+      {
       date: '2025-12-14',
       slug: "structured-reference-links-added",
       title: "Reference links in articles have been structured",
