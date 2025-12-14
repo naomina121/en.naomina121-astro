@@ -3,7 +3,7 @@ export const siteUpdates = [
         date: '2025-12-14',
         slug: "updates-structured-data-ui-improvements",
         title: "We have implemented structural improvements and UI enhancements to the announcements list.",
-        content: "We have added structured data to the announcements list page and improved the UI. Announcements are now displayed separately by category, enhancing visibility and convenience.",
+        content: "We have added structured data to the announcements list page and improved the UI. Announcements are now displayed separately by category, enhancing visibility and convenience.We updated the notices list by adding categories and improving its structure and UI.As part of this update, the display and classification of past notices were adjusted. The content of individual notices has not been changed.",
         category: "Technical"
     },
       {
