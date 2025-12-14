@@ -1,4 +1,10 @@
 export const siteUpdates = [
+{
+      date: "2025-12-14",
+      slug: 'removed-buy-me-a-coffee-link',
+      title: 'Removed the Buy me a Coffee link',
+      content: "The Buy me a Coffee link has been removed. This is to operate purely as an informational site, not seeking profitability. Your support is appreciated, but your kind thoughts are more than enough!",
+  },
 {date: '2025-12-14',
       slug: "info-literacy-article-published",
       title: "New article ‘Why do search engines and AI select 'dubious medical articles”?’ published",
