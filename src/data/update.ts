@@ -1,4 +1,10 @@
 export const siteUpdates = [
+      {
+      date: '2025-12-14',
+      slug: "structured-reference-links-added",
+      title: "Reference links in articles have been structured",
+      content: "Reference links in articles have been added as structured data. This aims to clarify the academic basis and provide readers with a more reliable source of information.",
+  },
 {
       date: "2025-12-14",
       slug: 'removed-buy-me-a-coffee-link',

@@ -8,6 +8,9 @@ image:
     url: '/images/cognitive-bias.jpg'
     alt: 'Image illustrating cognitive bias'
 tags: ["Mental-Health","Information-Literacy"]
+referrals:
+  - title: 'Hundreds dead because of Covid-19 misinformation'
+    url: 'https://www.bbc.com/news/world-53755067'
 ---
 
 <div class="box">
@@ -59,9 +62,3 @@ This is precisely why, should medical professionals or specialists disseminate m
 「[Why do search engines and AI select “dubious medical articles”? ― The Limitations of Algorithms and SEO ―](/info-literacy/how-search-and-ai-evaluate-medical-content)」
 
 The next article will explore the technical limitations of how misinformation, exploiting gaps in human psychology, gets amplified and prioritised by AI and search algorithms.
-
-## References
-
-<ul class="list">
-<li><a class="link" href="https://www.bbc.com/news/world-53755067">Hundreds dead' because of Covid-19 misinformation</a></li>
-</ul>

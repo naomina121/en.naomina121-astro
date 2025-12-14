@@ -2,12 +2,26 @@
 layout: ../../layouts/MarkdownPostLayout.astro
 title: "Hold on a moment, is that really true? Cultivating a self that isn't swept along by information: The story of ‘metacognition’"
 pubDate: 2025-12-11
+modDate: 2025-12-14
 description: "Exploring the relationship between information literacy, metacognition, and mental health, incorporating the latest research. Packed with tips for cultivating a self that isn't swept along by information."
 author: "Nao"
 image:
     url: "/images/metacognition-mental-health.jpg"
     alt: "Why follow that information? Become the one who leads."
 tags: ["Information-Literacy", "Metacognition"]
+referrals:
+  - title: 'Metacognition-Associated Factors in Physical and Occupational Therapy Students: A Cross-Sectional Study - PMC'
+    url: 'https://pmc.ncbi.nlm.nih.gov/articles/PMC11506545/'
+  - title: 'How Local and Global Metacognition Shape Mental Health'
+    url: 'https://seowxft.github.io/files/2021-05-22-How-local-and-global-metacognition-shape-mental-health.pdf'
+  - title: 'The Inclusion of Metacognition in Source Evaluation Instruction – DOAJ'
+    url: 'https://doaj.org/article/d4e233290da04fc393b9fd77a574f21c'
+  - title: 'Fact-Checking of Health Information: The Effect of Media Literacy, Metacognition and Health Information Exposure'
+    url: 'https://www.researchgate.net/publication/353393523_Fact-Checking_of_Health_Information_The_Effect_of_Media_Literacy_Metacognition_and_Health_Information_Exposure'
+  - title: 'Improvement in generic problem-solving abilities of students by use of tutor-less problem-based learning in a large classroom setting - PubMed'
+    url: 'https://pubmed.ncbi.nlm.nih.gov/23463230/'
+  - title: 'Frontiers | The influence of students’ problem-solving understanding and results of students’ mathematics learning'
+    url: 'https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2023.1088556/full'
 ---
 
 ## Introduction
@@ -235,23 +249,3 @@ Now, here's a question for you.
 [Before moving on](/info-literacy/thought/) to the next article, take a moment to reflect on whether thinking is always the right approach—and what it means for you.
 
 ---
-
-### References
-
-The references for this article are as follows.
-
-<ul class="list">
-
-<li style="padding:10px 0px; border-bottom:1px dashed #505050"><a style="color:#a193e9;" href="https://pmc.ncbi.nlm.nih.gov/articles/PMC11506545/?ref=localhost">Metacognition-Associated Factors in Physical and Occupational Therapy Students: A Cross-Sectional Study - PMC</a></li>
-
-<li style="padding:10px 0px; border-bottom:1px dashed #505050"><a style="color:#a193e9;" href="https://seowxft.github.io/files/2021-05-22-How-local-and-global-metacognition-shape-mental-health.pdf?ref=localhost">How Local and Global Metacognition Shape Mental Health</a></li>
-
-<li style="padding:10px 0px; border-bottom:1px dashed #505050"><a style="color:#a193e9;" href="https://doaj.org/article/d4e233290da04fc393b9fd77a574f21c?ref=localhost">The Inclusion of Metacognition in Source Evaluation Instruction – DOAJ</a></li>
-
-<li style="padding:10px 0px; border-bottom:1px dashed #505050"><a style="color:#a193e9;" href=‘https://www.researchgate.net/publication/353393523_Fact-Checking_of_Health_Information_The_Effect_of_Media_Literacy_Metacognition_and_Health_Information_Exposure?ref=localhost’>Fact-Checking of Health Information: The Effect of Media Literacy, Metacognition and Health Information Exposure</a></li>
-
-<li style="padding:10px 0px; border-bottom:1px dashed #505050"><a style="color:#a193e9;" href="https://pubmed.ncbi.nlm.nih.gov/23463230/?ref=localhost">Improvement in generic problem-solving abilities of students by use of tutor-less problem-based learning in a large classroom setting - PubMed</a></li>
-
-<li style="padding:10px 0px; border-bottom:1px dashed #505050" ><a style="color:#a193e9;" href="https://www.frontiersin.org/journals/education/articles/10.3389/feduc.2023.1088556/full?ref=localhost">Frontiers | The influence of students’ problem-solving understanding and results of students’ mathematics learning</a></li>
-
-</ul>
