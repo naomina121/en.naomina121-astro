@@ -2,9 +2,7 @@
 const pageTitle = "NAOMINA121";
 import Layout from "../layouts/Layout.astro";
 import { siteUpdates } from "../data/update";
-const latestUpdates = [...siteUpdates]
-  .sort((a, b) => b.date.localeCompare(a.date)) // 新しい順
-  .slice(0, 3);
+const update = siteUpdates;
 const PubDate = "2025-12-01";
 const ModDate = "2025-12-11";
 ---
@@ -54,20 +52,50 @@ const ModDate = "2025-12-11";
 
 <p>We aim for a sustainable update frequency, targeting a pace of <u class="orange">once a week</u> for article updates. </p>
   <p>Should you have any questions or feedback regarding the content of our articles, please contact us via the <a href="/contact/" class="link">contact page</a>. </p>
-
-<ul style="margin-top:10px; font-weight:600; border-top:1px solid #727272; padding-top:10px;">
-    {latestUpdates.map((update) => (
+ <p class="mt-2 font-semibold" style="color:#e34848; padding-top:10px; margin-top:10px; border-top:1px solid #727272">Update History of Important Matters</p>
+  <ul style="font-weight:600;">
+    {update.map((update) => {
+      return update.category==="Policy" && (
       <li class="my-1">
-
-<time class="text-sm orange" datetime={update.date}>{update.date}</time>
-        {" : "}
+        <time class="text-sm orange" datetime={update.date}>{update.date}</time>
+        {' : '}
         <a href={`/updates/${update.slug}`} class="text-[#c9c9c9] hover:underline hover:underline-offset-4">
           {update.title}
-
-</a>
+        </a>
       </li>
-    ))}
+    )
+    }).filter(Boolean).slice(0, 3)}
   </ul>
+   <p class="mt-2 font-semibold" style="color:#ceb300; padding-top:10px; margin-top:10px; border-top:1px solid #727272">Site Update History</p>
+  <ul style="font-weight:600;">
+    {update.map((update) => {
+      return update.category==="Technical" && (
+      <li class="my-1">
+        <time class="text-sm orange" datetime={update.date}>{update.date}</time>
+        {' : '}
+        <a href={`/updates/${update.slug}`} class="text-[#c9c9c9] hover:underline hover:underline-offset-4">
+          {update.title}
+        </a>
+      </li>
+    )
+    }).filter(Boolean).slice(0, 3)}
+  </ul>
+  <p class="mt-2 font-semibold" style="color:#cdcdcd; padding-top:10px; margin-top:10px; border-top:1px solid #727272">Update Information List</p>
+
+  <ul style="font-weight:600;">
+    {update.map((update) => {
+      return update.category==="Article" && (
+      <li class="my-1">
+        <time class="text-sm orange" datetime={update.date}>{update.date}</time>
+        {' : '}
+        <a href={`/updates/${update.slug}`} class="text-[#c9c9c9] hover:underline hover:underline-offset-4">
+          {update.title}
+        </a>
+      </li>
+    )
+    }).filter(Boolean).slice(0, 3)}
+  </ul>
+
   <p style="margin-top:10px; text-align:right;">
     <a href="/updates/" class="gold underline">→ View all announcements</a>
   </p>
