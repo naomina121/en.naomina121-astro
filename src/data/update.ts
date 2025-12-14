@@ -3,7 +3,7 @@ export const siteUpdates = [
       date: "2025-12-14",
       slug: 'removed-buy-me-a-coffee-link',
       title: 'Removed the Buy me a Coffee link',
-      content: "I have removed the Buy Me a Coffee link. This is to operate purely as an informational site, not seeking profitability. Your support is more than enough; thank you always for reading.",
+      content: "I have removed the Buy Me a Coffee link. This is to operate purely as an informational site, not seeking profitability. Your support is more than enough. Thank you for reading.",
   },
 {date: '2025-12-14',
       slug: "info-literacy-article-published",
