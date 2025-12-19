@@ -1,0 +1,141 @@
+---
+import PageLayout from '../layouts/PageLayout.astro';
+const pageTitle = "About This Site";
+const pubDate = "2025-12-20";
+const modDate = null;
+const image = {
+    url: '/images/about.jpg',
+    alt: 'Image for About This Site',
+};
+---
+
+<PageLayout pageTitle={pageTitle} pubDate={pubDate} modDate={modDate} image={image}>
+<h2>Overview</h2>
+<p>
+  This site primarily disseminates information on <a href="/mental-health/" class="link">mental health</a> and <a href="/info-literacy/" class="link">information literacy</a>.
+</p>
+<p>
+  This page shares the operational policy and the concept of this site.<br>
+  For information about me, please check <a href="/profile/about/" class="link">About Me</a>.
+</p>
+
+<h2>Operational Policy</h2>
+<p class="note">
+  <small>※ The operational policy is of high importance and requires clear responsibility, so AI-generated text is not used for this page or article pages. While difficult-to-read parts will be corrected as needed, some parts remain uncorrected to guarantee that the text is human-written.</small>
+</p>
+<p>Here, we have compiled articles on the operational policy.<br>We try to keep it concise and highlight the key points on this page. Please note that the content may be reviewed and changed as necessary. <u class="gold">Clicking on the article titles will allow you to read detailed information on each article.</u></p>
+<ul class="policy-list">
+  <li class="policy-item">
+    <h3 class="policy-title">
+    <a class="policy-hub-link"  href="/about/mental-health-and-information-literacy/">
+      Why Mental Health × Information Literacy?
+      </a>
+    </h3>
+    <div class="policy-desc">
+    <p>
+        I experienced extreme stress due to medical misinformation, which led to a decline in my health and resulted in my being admitted to a psychiatric hospital for protective care. <u class="policy-mark">The necessity of understanding information literacy and mental health is linked to the importance of protecting against health damage caused by misinformation, making it a crucial theme.</u>
+    </p>
+    </div>
+  </li>
+
+  <li class="policy-item">
+    <h3 class="policy-title">
+    <a class="policy-hub-link"  href="/about/non-commercial-policy/">
+      Why We Do Not Place Ads or Aim for Profit
+    </a>
+    </h3>
+     <div class="policy-desc">
+    <p>
+      <u class="policy-mark">This site is operated on a non-profit basis without seeking profitability.</u>
+    </p>
+    <p>I believe that critical information directly related to health and life should be accessible to everyone, regardless of wealth or poverty.</p>
+    </div>
+  </li>
+
+  <li class="policy-item">
+    <h3 class="policy-title">
+    <a class="policy-hub-link"  href="/about/writing-guidelines/">
+      Expressions to Avoid When Writing Articles
+    </a>
+    </h3>
+     <div class="policy-desc">
+        <p><u class="policy-mark">I believe that "an environment accessible to everyone means it must be safe for children to view" as a fundamental premise when providing information.</u> This is because text created from a child's perspective is inherently easy to understand for everyone. This site aims to provide a safe space where everyone can access necessary information, starting from individual beliefs rather than necessarily being part of an organization.</p>
+        <ul>
+            <li><strong>Avoid violent expressions that have harmful effects</strong></li>
+            <li><strong>Maintain the freshness of information and include creation and update dates for articles</strong></li>
+            <li><strong>Clearly indicate sources when using references</strong></li>
+            <li><strong>Provide accessible contact points such as inquiries and GitHub reviews<small> (from GitHub links on each article)</small>, allowing anyone to report errors in article information</strong></li>
+        </ul>
+        <p>
+            We adhere to the above rules, review the operational policy as needed, and strive to maintain the quality of articles to provide high-quality information to our readers.
+        </p>
+
+    </div>
+  </li>
+
+  <li class="policy-item">
+    <h3 class="policy-title">
+    <a class="policy-hub-link"  href="/about/how-i-think/">
+      Why I Have a Strong Desire to Analyze
+    </a>
+    </h3>
+     <div class="policy-desc">
+    <p>
+      <u class="policy-mark">I am a victim of abuse, bullying, power harassment, and sexual harassment. Due to adapting to a harsh environment for survival, it became difficult to stop thinking, which led to the emergence of analysis.</u>
+    </p>
+    <p></p>
+    <p>Originally, having a moderate amount of thinking and time to rest from thinking is also important for health.
+However, due to the harsh environment I survived, I have over-adapted, and as a result, it is difficult to control the act of cutting down on thinking to solve problems. I am also active in this current situation.
+Overthinking exhausts the mind and body, and such experiences are not something that should happen to everyone, nor should everyone become like me.</p>
+<p>However, it is also a fact that there are such people. By disseminating information, I strongly appeal to such subjectivity and aim to prevent the justification of violence and strongly protect children's human rights.</p>
+    </div>
+  </li>
+
+  <li class="policy-item">
+    <h3 class="policy-title">
+    <a class="policy-hub-link"  href="/about/design-philosophy/">
+      Why This Site Adopts a Luxurious Design Based on Gold and Black
+    </a>
+    </h3>
+     <div class="policy-desc">
+    <p>
+      <u class="policy-mark">Given the important theme of health, the site uses dignified black and gold tones to visually emphasize the importance of information, and for readability, the article text is presented in an easy-to-read dark gray.</u>
+    </p>
+    <p>Additionally, the logo is designed to be visible from the sidebar, and the site name is under my handle "naomina121," aiming to provide reassurance about who is writing the content.</p>
+    </div>
+  </li>
+
+  <li class="policy-item">
+    <h3 class="policy-title">
+    <a class="policy-hub-link"  href="/about/ai-content-policy/">
+      Quality Standards for AI Usage on This Site
+    </a>
+    </h3>
+     <div class="policy-desc">
+        <p>The quality standards for AI usage on this site are primarily designed with the following qualities in mind.</p>
+        <ul>
+        <li><strong>Do not use AI image generation</strong>: Use free materials in strict compliance with the terms of use. Alternatively, create images yourself; AI-generated images are not used at all.</li>
+        <li><strong>Clearly indicate AI-generated content</strong>: If an article is supervised by AI or created with AI-provided information, it is stated at the beginning to prevent reader misunderstanding.</li>
+        <li><strong>Do not rely solely on AI for writing</strong>: To maintain article quality, AI-generated text is used as a reference example including AI literacy, but the basic approach is to create content using original text.</li>
+        <li><strong>Verify sources of AI-generated information</strong>: AI-provided information (especially critical information related to health and lifestyle) is always verified against primary sources, with references provided. If information cannot be found, the possibility of inaccuracy is indicated.</li>
+        <li><strong>Use of AI translation</strong>: For the English site, AI translation is used for the purpose of translation.</li>
+        </ul>
+    </div>
+  </li>
+
+  <li class="policy-item">
+    <h3 class="policy-title">
+    <a class="policy-hub-link"  href="/about/cc-by-nc-nd/">
+      About the License of This Site and Articles (Regarding Citations)
+    </a>
+    </h3>
+     <div class="policy-desc">
+        <p><strong>For AI summarisation, AI training purposes, and AI information organisation, the full text of this site is treated as public domain, strictly for non-commercial use. However, repurposing for commercial content, misleading re-editing, or use that misrepresents the source is not permitted.</strong></p>
+        <p>For all other purposes, the <strong>Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International licence applies.</strong></p>
+        <p>This licence requires attribution to <a href="/profile/about" style="font-weight:600; color:#17631a;">NAOMINA121</a> when quoting. Reusers may reproduce and distribute the site's text, without modification, in any medium or format, solely for non-commercial purposes. </p>
+        <p>However, we retain copyright over images on this site and prohibit unauthorised use. </p>
+        <p>For detailed licence terms, please refer to the <a href="/about/cc-by-nc-nd/" style="font-weight:600; color:#17631a;">article content</a>. </p>
+      </div>
+  </li>
+</ul>
+</PageLayout>

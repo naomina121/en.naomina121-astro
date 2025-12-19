@@ -1,5 +1,13 @@
 export const siteUpdates = [
     {
+      date: '2025-12-20',
+      slug: "about-add",
+      title: "Added Operational Policy",
+      content: "We have added an operational policy for this site. It details the site's purpose and approach to information dissemination.",
+      link:'https://en.naomina121.com/about/',
+      category:"Policy"
+    },
+    {
         date: '2025-12-14',
         slug: "updates-structured-data-ui-improvements",
         title: "Announcements list: structural and UI improvements",
@@ -40,15 +48,17 @@ export const siteUpdates = [
 {date: '2025-12-14',
           updatedAt:'2025-12-14',
       slug: "info-literacy-article-published",
-      title: "New article published: Why do search engines and AI select dubious medical articles?",
+      title: "New article ‘Why do search engines and AI select “dubious medical articles”? — The limitations of algorithms and SEO —’ Published",
+      link:'https://en.naomina121.com/info-literacy/how-search-and-ai-evaluate-medical-content',
       content: "A new article on information literacy has been published.It explains the technical limitations of how search engines and AI evaluate and amplify misinformation.",
       category: "Article"
   },
   {
       date: '2025-12-14',
-            updatedAt:'2025-12-14',
+      updatedAt:'2025-12-14',
       slug: "mental-health-article-published",
-      title: "New article ‘Why Do We Trust Articles Written by Doctors?’ Published",
+      title: "New article ‘Why do we trust medical articles? ― Harmless medical information that hurts patients ―’ Published",
+      link:"https://en.naomina121.com/mental-health/why-we-trust-medical-information",
       content: "We have published a new article examining the harm that can occur when doctors or experts disseminate incorrect medical information. It explains the mechanisms behind this through psychological concepts.",
         category: "Article"
     },

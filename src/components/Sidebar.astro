@@ -2,29 +2,52 @@
 const isIndex = Astro.url.pathname === "/";
 const isProfile = Astro.url.pathname.startsWith("/profile/");
 const isAbout = Astro.url.pathname.startsWith("/profile/about");
+const isAboutIndex = Astro.url.pathname === "/about/";
+const isAboutPage = Astro.url.pathname.startsWith("/about/");
+const currentPath = Astro.url.pathname;
 const isNobodyPerfect = Astro.url.pathname.startsWith("/profile/nobody-perfect");
 const isNaoAnalysis = Astro.url.pathname.startsWith("/profile/nao-analysis");
 import Toc from '@components/Toc.astro';
 ---
-<aside class="w-[250px] mt-0 pr-8">
+<aside class="sidebar w-[250px] mt-0 pr-8">
 <a href="/"><img class="site-logo" src="/images/naomina.jpg" alt="naomina121のアイコン" />
 {isIndex && (<h1 class="site-name">NAOMINA121</h1>)}{!isIndex && (<p class="site-name">NAOMINA121</p>)}</a>
+
+
 <nav>
     <ul class="nav-links">
-        <li><a href="/profile/about">Profile</a></li>
-            {isProfile && (<ul class="profile-submenu ml-4 mt-2">
-            {isAbout && (<li><span class="current">About Nao</span></li>)}
-            {!isAbout && (<li><a href="/profile/about">About Nao</a></li>)}
-            {isNobodyPerfect && (<li><span class="current">Nobody is Perfect</span></li>)}
-            {!isNobodyPerfect && (<li><a href="/profile/nobody-perfect">Nobody is Perfect</a></li>)}
-            {isNaoAnalysis && (<li><span class="current">Nao's Analysis Results</span></li>)}
-            {!isNaoAnalysis && (<li><a href="/profile/nao-analysis">Nao's Analysis Results</a></li>)}
-            </ul>)}
+            {isAboutIndex && (<li><span class="current">About This Site</span></li>)}
+            {!isAboutIndex && (<li><a href="/about/">About This Site</a></li>)}
+{isAboutPage && (<ul class="profile-submenu ml-4 mt-2">
+    {currentPath === "/about/mental-health-and-information-literacy/" && (<li><span class="current">Why Mental Health × Information Literacy?</span></li>)}
+    {currentPath !== "/about/mental-health-and-information-literacy/" && (<li><a href="/about/mental-health-and-information-literacy/">Why Mental Health × Information Literacy?</a></li>)}
+    {currentPath === "/about/non-commercial-policy/" && (<li><span class="current">Why We Do Not Place Ads or Aim for Profit</span></li>)}
+    {currentPath !== "/about/non-commercial-policy/" && (<li><a href="/about/non-commercial-policy/">Why We Do Not Place Ads or Aim for Profit</a></li>)}
+    {currentPath === "/about/writing-guidelines/" && (<li><span class="current">Expressions to Avoid When Writing Articles</span></li>)}
+    {currentPath !== "/about/writing-guidelines/" && (<li><a href="/about/writing-guidelines/">Expressions to Avoid When Writing Articles</a></li>)}
+    {currentPath === "/about/how-i-think/" && (<li><span class="current">Why I Have a Strong Desire to Analyze</span></li>)}
+    {currentPath !== "/about/how-i-think/" && (<li><a href="/about/how-i-think/">Why I Have a Strong Desire to Analyze</a></li>)}
+    {currentPath === "/about/design-philosophy/" && (<li><span class="current">Why This Site Adopts a Luxurious Design Based on Gold and Black</span></li>)}
+    {currentPath !== "/about/design-philosophy/" && (<li><a href="/about/design-philosophy/">Why This Site Adopts a Luxurious Design Based on Gold and Black</a></li>)}
+    {currentPath === "/about/ai-content-policy/" && (<li><span class="current">Quality Standards for AI Usage on This Site</span></li>)}
+    {currentPath !== "/about/ai-content-policy/" && (<li><a href="/about/ai-content-policy/">Quality Standards for AI Usage on This Site</a></li>)}
+    {currentPath === "/about/cc-by-nc-nd/" && (<li><span class="current">About the License of This Site and Articles (Regarding Citations)</span></li>)}
+    {currentPath !== "/about/cc-by-nc-nd/" && (<li><a href="/about/cc-by-nc-nd/">About the License of This Site and Articles (Regarding Citations)</a></li>)}
+    </ul>)}
+        <li><a href="/profile/about">Profile</a>
+{isProfile && (<ul class="profile-submenu ml-4 mt-2">
+    {isAbout && (<li><span class="current">About Me</span></li>)}
+    {!isAbout && (<li><a href="/profile/about">About Me</a></li>)}
+    {isNobodyPerfect && (<li><span class="current">Nobody's Perfect</span></li>)}
+    {!isNobodyPerfect && (<li><a href="/profile/nobody-perfect">Nobody's Perfect</a></li>)}
+    {isNaoAnalysis && (<li><span class="current">Nao's Analysis Results</span></li>)}
+    {!isNaoAnalysis && (<li><a href="/profile/nao-analysis">Nao's Analysis Results</a></li>)}
+    </ul>)}
         </li>
         <li><a href="/mental-health/">Mental Health</a></li>
         <li><a href="/info-literacy/">Information Literacy</a></li>
         <li><a href="/blog/">Nao's Blog</a></li>
-        <li><a href="/links/">Nao's Activity Base</a></li>
+        <li><a href="/links/">Nao's Activity Bases</a></li>
     </ul>
 </nav>
 {!isIndex && (

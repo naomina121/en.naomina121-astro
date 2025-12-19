@@ -1,13 +1,12 @@
 ---
-import Layout from "../layouts/Layout.astro";
-const pageTitle = "Nao's base of operations";
-const PubDate = "2025-12-01";
-const ModDate = "2025-12-11";
+import PageLayout from '../layouts/PageLayout.astro';
+const pageTitle = "Nao's Activity Bases";
+const pubDate = "2025-12-01";
+const modDate = "2025-12-20";
+const description = "Here we introduce Nao's base of operations.";
 ---
 
-<Layout pageTitle={pageTitle} PubDate={PubDate} ModDate={ModDate}>
-<main id="article-body" class="w-full max-w-6xl bg-[#1e1e1e] px-16 pb-[60px] border-l-[1px] border-[#3c3c3c]">
-<h1>Nao's Base of Operations</h1>
+<PageLayout pageTitle={pageTitle} description={description} pubDate={pubDate} modDate={modDate}>
 <p>Here we introduce Nao's base of operations.</p>
 <h2>Site List</h2>
 <h3>Text-Based Sites</h3>
@@ -42,5 +41,4 @@ const ModDate = "2025-12-11";
 <li><a href="https://note.com/naomina121_note" target="_blank">note</a></li>
 <li><a href="https://note.com/one_2025_" target="_blank">one's note account</a></li>
 </ul>
-</main>
-</Layout>
+</PageLayout>

@@ -1,45 +1,37 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import MainToc from "../components/MainToc.astro";
+import PageLayout from '../layouts/PageLayout.astro';
 const pageTitle = "Information Literacy";
-const PubDate = "2025-12-11";
-const ModDate = "2025-12-14";
+const pubDate = "2025-12-01";
+const modDate = "2025-12-20";
+const image = {
+    url: '/images/information-literacy.jpg',
+    alt: 'Information Literacy Image',
+};
+const description = "This page introduces articles related to information literacy, compiled by Nao.";
 ---
 
-<Layout pageTitle={pageTitle} PubDate={PubDate} ModDate={ModDate}>
-<main id="article-body" class="w-full max-w-6xl bg-[#1e1e1e] px-16 pb-[60px] border-l-[1px] border-[#3c3c3c]">
-<h1>
-Information Literacy
-</h1>
-
-<ul class="tags mb-0 flex flex-wrap gap-2 my-0 w-full justify-end">
-        <li class="mb-2 text-sm">📰Creation date: {PubDate.toString().slice(0,10)}</li>
-
-{ModDate && <li class="mb-2 text-sm">✏️Last updated: {ModDate.toString().slice(0,10)}</li>}
-    </ul>
-<img class="profile-picture max-w-full h-auto" src="/images/information-literacy.jpg" alt="Information Literacy" />
-<h2>Table of Contents</h2>
-<MainToc />
+<PageLayout pageTitle={pageTitle} description={description} pubDate={pubDate} modDate={modDate} image={image}>
 <h2>Overview</h2>
-<p>Enhancing information literacy is a crucial concept directly linked to both <a href="/mental-health/" class="link">mental health</a> and 21st-century thinking. </p>
+<p>Enhancing information literacy is an important concept directly linked to both <a href="/mental-health/" class="link">mental health</a> and 21st-century thinking.</p>
 <h2>Articles</h2>
-<h3>Mental Health from the Perspective of Information Literacy</h3>
-<span>Tags: <a href="/tags/Mental-Health" class="link">Mental Health</a></span>
+
+<h3>Considering Mental Health from the Perspective of Information Literacy</h3>
+<span>Tags: <a href="/tags/mental-health" class="link">Mental Health</a></span>
 <ul class="menu-list">
-<li><a href="/info-literacy/how-search-and-ai-evaluate-medical-content">Why do search engines and AI select ‘dubious medical articles’? — The limitations of algorithms and SEO —</a></li>
-</ul>
-<h3>Information Literacy Through the Lens of Metacognition</h3>
-<span>Tags: <a href="/tags/Metacognition" class="link">Metacognition</a></span>
-<ul class="menu-list">
-<li><a href="/info-literacy/metacognition-mental-health">‘Hold on, is that really true?’ Cultivating a self that isn't swept away by information: The story of ‘metacognition’</a></li>
+<li><a href="/info-literacy/how-search-and-ai-evaluate-medical-content">Why do search engines and AI select “dubious medical articles”? — The limitations of algorithms and SEO —</a></li>
 </ul>
 
-<h3>Acquiring Information Literacy Through Thought</h3>
-<span>Tags: <a href="/tags/Thought" class="link">Thought</a></span>
+<h3>Considering Information Literacy from the Perspective of Metacognition</h3>
+<span>Tags: <a href="/tags/metacognition" class="link">Metacognition</a></span>
 <ul class="menu-list">
-<li><a href="/info-literacy/survival-theory">The Survival Theory of the Socially Vulnerable - Why the Right to Survival is Necessary -</a></li>
-<li><a href="/info-literacy/thought">I Stopped Thinking, Humankind Has No Future</a></li>
+<li><a href="/info-literacy/metacognition-mental-health">"Wait a minute, is that true?" The story of "metacognition" that nurtures oneself not to be swayed by information</a></li>
 </ul>
 
-</main>
-</Layout>
+
+<h3>Acquiring Information Literacy from the Perspective of Thought</h3>
+<span>Tags: <a href="/tags/thought" class="link">Thought</a></span>
+<ul class="menu-list">
+<li><a href="/info-literacy/survival-theory">Socially Vulnerable Survival Theory - Why the Right to Survival is Necessary -</a></li>
+<li><a href="/info-literacy/thought">Stopped Thinking, No Future for Humans</a></li>
+</ul>
+</PageLayout>

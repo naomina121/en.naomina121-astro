@@ -1,12 +1,12 @@
 ---
-const { frontmatter } = Astro.props;
-const Url = "https://en.naomina121.com" +frontmatter.url;
-const Title = frontmatter.title;
+const { frontmatter, url } = Astro.props;
+const Url = url.toString();
+const Title = frontmatter.pageTitle;
 ---
 
 <section class="sns-share-section">
 <h2>Share this article</h2>
-<p>If you found this article helpful, please share it.</p>
+<p>If you found this article useful, please do share it. </p>
 <div id="social-platforms">
 <a class="btn btn-icon btn-facebook" href=`http://www.facebook.com/share.php?u=${Url}` rel="nofollow noopener" target="_blank"><i class="fa fa-facebook"></i><span>Facebook</span></a>
 <a class="btn btn-icon btn-x" href=`https://twitter.com/intent/tweet?url=${Url}&text=${Title}&via=naomina121` rel="nofollow noopener" target="_blank"><i class="fa-brands fa-x-twitter"></i><span><i class="fa-brands fa-x-twitter"></i></span></a>
@@ -20,7 +20,10 @@ const Title = frontmatter.title;
 </section>
 
 <style>
-@import url(//maxcdn.bootstrapcdn.com/font-awesome/7.0.0/css/font-awesome.min.css);
+/*@import url(//maxcdn.bootstrapcdn.com/font-awesome/7.0.0/css/font-awesome.min.css);*/
+
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css);
+
 @import url(https://fonts.googleapis.com/css?family=Roboto:400,300);
 
 .sns-share-section {
@@ -192,8 +195,6 @@ const Title = frontmatter.title;
         grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
     }
 }
-
-
 </style>
 
 <script is:inline>
@@ -207,9 +208,9 @@ const Title = frontmatter.title;
         const urlToCopy = urlInput.value;
         navigator.clipboard.writeText(urlToCopy)
             .then(() => {
-                copyBtn.textContent = 'URL Copied!';
+                copyBtn.textContent = 'Copied!';
                 setTimeout(() => {
-                    copyBtn.textContent = 'Copy URL';
+                    copyBtn.textContent = 'Copy Article URL';
                 }, 2000);
             })
             .catch(err => {

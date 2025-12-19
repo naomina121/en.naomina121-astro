@@ -1,195 +1,70 @@
 ---
-import "../styles/global.css";
-import Footer from '@components/Footer.astro';
-import Sidebar from '@components/Sidebar.astro';
-import Sp from '@components/Sp.astro';
-import Sns from '@components/Sns.astro';
+import Layout from "./Layout.astro";
 import References from '@components/References.astro';
-import { siteUpdates } from "../data/update";
-import StructuredBreadcrumbs from '@components/Breadcrumbs.astro';
+import Sns from '@components/Sns.astro';
+function getIsUrl(pathname) {
+  return Astro.url.pathname === pathname;
+}
+
+function getIsUrlStartsWith(pathnameStart) {
+  return Astro.url.pathname.startsWith(pathnameStart);
+}
 const { frontmatter } = Astro.props;
-const{ minutesRead } = Astro.props.frontmatter;
-const isProfile = Astro.url.pathname.startsWith("/profile/");
-const isAbout = Astro.url.pathname === "/profile/about/";
-const isBlog = Astro.url.pathname.startsWith("/blog/");
-const isMentalHealth = Astro.url.pathname.startsWith("/mental-health/");
-const isInfoLiteracy = Astro.url.pathname.startsWith("/info-literacy/");
-const canonicalURL = new URL(Astro.url.pathname, 'https://en.naomina121.com');
-const mainURL = new URL(Astro.url.pathname, 'https://naomina121.com');
-const ogpImageURL = new URL(frontmatter.image.url, canonicalURL);
-const websiteSchema = {
-  "@context": "https://schema.org/",
-  "@type": "WebSite",
-  "name": "naomina121",
-  "url": "https://en.naomina121.com/",
-  "description": "This site is the official site of Nao. It provides information such as blogs, profiles, and activity bases.",
-};
-  const siteUrl = "https://en.naomina121.com/";
-  let title = frontmatter.title;
-  const pageSchema = {
-    "@context": "https://schema.org/",
-    "@type": "BlogPosting",
-    "headline": title,
-    "description": frontmatter.description,
-    "image": ogpImageURL.toString(),
-    "url": canonicalURL.toString(),
-    "datePublished": new Date(frontmatter.pubDate).toISOString(),
-    "dateModified": frontmatter.modDate
-    ? new Date(frontmatter.modDate).toISOString()
-    : new Date(frontmatter.pubDate).toISOString(),
-    "author": {
-      "@type": "Person",
-      "name": frontmatter.author,
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "naomina121",
-      "logo": {
-        "@type": "ImageObject",
-        "url": siteUrl ? new URL('/images/blog2.webp', siteUrl).toString() : undefined,
-      }
-    }
-  };
-
-const baseUrl = Astro.site?.toString().replace(/\/$/, "") ?? "";
-
-const bookSchema = {
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Naomi Hashimoto",
-  "alternateName": "naomina121",
-  "url": "https://en.naomina121.com/",
-  "sameAs": [
-    "https://www.amazon.co.jp/stores/naomina121/author/B0FWB5GP5G/",
-    "https://github.com/naomina121",
-    "https://qiita.com/naomina121",
-    "https://x.com/naomina121",
-    "https://note.com/naomina121_note",
-    "https://mastodon.naomina121.com/@naomina121",
-    "https://www.youtube.com/@naomina121_blog"
-  ],
-  "jobTitle": "Author"
-};
-
-const infoSchema = {
-  "@context": "https://schema.org/",
-  "@type": "ItemList",
-  "itemListElement": siteUpdates.map((update, index) => ({
-    "@type": "ListItem",
-    "position": index + 1,
-    "item": {
-      "@type": "BlogPosting",
-      "headline": update.title,
-      "datePublished": update.date,
-      "description": update.content,
-      "url": `${baseUrl}/updates/${update.slug}/`,
-    },
-  })),
-};
-const breadcrumbItems = isBlog ? [
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Blog', item: Astro.site.origin + '/blog/' },
-      { name: frontmatter.title, item: canonicalURL.toString() }
-    ] : isProfile ? [
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Profile', item: canonicalURL.toString() },
-      { name: frontmatter.title, item: canonicalURL.toString() }
-    ] : isMentalHealth ? [
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Mental Health', item: Astro.site.origin + '/mental-health/' },
-      { name: frontmatter.title, item: canonicalURL.toString() }
-    ] : isInfoLiteracy ? [
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Information Literacy', item: Astro.site.origin + '/info-literacy/' },
-      { name: frontmatter.title, item: canonicalURL.toString() }
-    ]: [
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: frontmatter.title, item: canonicalURL.toString() }
-    ];
-const ga4TrackingCode = `
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-28TE1TDYKD"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-28TE1TDYKD');
-</script>
-`;
+const siteUrl = Astro.site?.toString().replace(/\/$/, "") ?? "";
+const url = new URL(Astro.url.pathname, siteUrl);
+const jaURL = new URL(Astro.url.pathname, 'https://naomina121.com');
 ---
-<!doctype html>
-<html lang="en">
-  <head prefix="og: http://ogp.me/ns#">
-<!-- Google tag (gtag.js) -->
-<Fragment set:html={ga4TrackingCode} />
-<script src="https://kit.fontawesome.com/3ba6930b7b.js" crossorigin="anonymous"></script>
 
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="generator" content={Astro.generator} />
-    <link rel="sitemap" href="/sitemap-index.xml" />
-    <link rel="canonical" href={canonicalURL.toString()}>
-    <link rel="alternate" hreflang="ja" href={mainURL.toString()} />
-    <link rel="alternate" hreflang="en" href={canonicalURL.toString()} />
-    <link rel="alternate" hreflang="x-default" href={mainURL.toString()} />
-    <meta property="og:title" content={frontmatter.title} />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content={canonicalURL.toString()} />
-    <meta property="og:image" content={ogpImageURL.toString()} />
-    <meta property="og:description" content={frontmatter.description} />
-    <meta property="og:site_name" content="naomina121" />
-    <meta property="og:locale" content="ja_JP" />
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@naomina121">
-    <meta name="twitter:title" content={frontmatter.title}>
-    <meta name="twitter:description" content={frontmatter.description}>
-    <meta name="twitter:image" content={ogpImageURL.toString()}>
-    <script type="application/ld+json" set:html={JSON.stringify(websiteSchema)} />
-    {isAbout && (
-      <script type="application/ld+json" set:html={JSON.stringify(bookSchema)} />
-    )}
-    {pageSchema && (
-      <script type="application/ld+json" set:html={JSON.stringify(pageSchema)} />
-    )}
-    <script type="application/ld+json" set:html={JSON.stringify(infoSchema)} />
-    <title>{frontmatter.title} | NAOMINA121</title>
-  </head>
-  <body>
-    <div class="flex flex-col h-full min-h-screen">
-    <div class="container flex justify-between items-start align-top mx-auto max-w-[1200px]">
-    <Sp/>
-    <Sidebar />
-    <main id="article-body" class="w-full max-w-6xl bg-[#1e1e1e] pb-[60px] px-16 border-l-[1px] border-[#3c3c3c]">
-    <h1> {frontmatter.title}</h1>
-
+<Layout frontmatter={frontmatter}>
+    <h1>{frontmatter.pageTitle}</h1>
 <ul class="tags mb-0 flex flex-wrap gap-2 my-0 w-full justify-end">
-        {frontmatter.tags.map((item:string) => <li><a class="tag" href={`/tags/${item}`}>#{item}</a></li>)}
-        <li class="mb-2 text-sm">📰 Created: {frontmatter.pubDate.toString().slice(0,10)}</li>
+  {frontmatter.tags.map((item: string) => (
+    <li>
+      <a class="tag" href={`/tags/${item}`}>#{item}</a>
+    </li>
+  ))}
 
-{frontmatter.modDate && <li class="mb-2 text-sm">✏️Last updated: {frontmatter.modDate.toString().slice(0,10)}</li>}
-<li><a style="color:gold;" class="underline text-sm mb-2 hover:no-underline" href={mainURL.toString()}>ja</a> / en</li>
-    </ul>
+  <li class="mb-2 text-sm">
+    📰Created: <time datetime={`${frontmatter.pubDate}T00:00:00+09:00`}>{frontmatter.pubDate.toString().slice(0,10)}</time>
+  </li>
+
+  {frontmatter.modDate && (
+    <li class="mb-2 text-sm">
+      ✏️Last Updated: <time datetime={`${frontmatter.modDate}T00:00:00+09:00`}>{frontmatter.modDate.toString().slice(0,10)}</time>
+    </li>
+  )}
+
+  {getIsUrlStartsWith("/podcast/") || getIsUrlStartsWith("/materials/") ? null : (
+    frontmatter.githubUrl ? (
+      <>
+        <li>
+          <a class="underline text-sm mb-2 link hover:no-underline" target="_blank" href={frontmatter.githubUrl}>(GitHub Source)</a>
+        </li>
+        <li>
+          <a style="color:gold;" class="underline text-sm mb-2 hover:no-underline" href={jaURL.toString()}>ja</a> / en
+        </li>
+      </>
+    ) : (
+      <li>
+          <a style="color:gold;" class="underline text-sm mb-2 hover:no-underline" href={jaURL.toString()}>ja</a> / en
+      </li>
+    )
+  )}
+</ul>
     <p class="mt-0 mb-6 text-right text-sm">📖Author: {frontmatter.author}</p>
-
-<img src={frontmatter.image.url} class="w-full max-w-[820px] max-h-[500px] object-cover" alt={frontmatter.image.alt} />
-{(isBlog || isMentalHealth || isInfoLiteracy) && <div class="timeCount my-6">
-
-<span class="timeCountTitle">
-    📖 Estimated reading time:
+    {getIsUrl("/podcast/") ||  getIsUrlStartsWith("/about/") || getIsUrlStartsWith("/podcast/") ? null :frontmatter.image ? <img src={frontmatter.image.url} class="w-full max-w-[820px] max-h-[500px] object-cover" alt={frontmatter.image.alt} /> : null}
+{getIsUrlStartsWith("/podcast/") ? null : !getIsUrl("/about/") || !getIsUrlStartsWith("/about/") ? null : <div class="timeCount my-6">
+    <span class="timeCountTitle">
+    📖 Estimated Reading Time：
     </span>
     <span class="timeCountSpan">
-        This article takes approximately <span class="bold">{minutesRead}</span> to read.
+        This article takes about <span class="bold">{frontmatter.minutesRead}</span> minutes to read.
     </span>
     </div>
   }
-
     <slot />
     {frontmatter.referrals && <References references={frontmatter.referrals} />}
-    <Sns frontmatter={frontmatter} />
-    </main>
-    </div>
-    <StructuredBreadcrumbs items={breadcrumbItems} />
-        <Footer />
-    </div>
-  </body>
+    {!getIsUrlStartsWith("/materials/") && (
+    <Sns frontmatter={frontmatter} url={url} />
+    )}
+</Layout>

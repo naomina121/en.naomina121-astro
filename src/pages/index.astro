@@ -1,19 +1,21 @@
 ---
-const pageTitle = "NAOMINA121";
-import Layout from "../layouts/Layout.astro";
+import PageLayout from '../layouts/PageLayout.astro';
 import { siteUpdates } from "../data/update";
+const pageTitle = "NAOMINA121";
 const update = siteUpdates;
-const PubDate = "2025-12-01";
-const ModDate = "2025-12-11";
+const pubDate = "2025-12-01";
+const modDate = "2025-12-10";
+const image = {
+    url: '/images/nao2.jpg',
+    alt: "Image for Nao's official website",
+};
+const description = "Welcome to Nao's official website. Here you can find information about Nao, mental health resources, information literacy, blogs, podcasts, and more.";
 ---
-
-<Layout pageTitle={pageTitle} PubDate={PubDate} ModDate={ModDate}>
-<main class="w-full max-w-6xl bg-[#1e1e1e] pb-[60px] px-16 border-l-[1px] border-[#3c3c3c]">
-<img class="profile-picture max-w-full h-auto" src="/images/nao2.jpg" alt="Nobody Is Perfect" />
+<PageLayout pageTitle={pageTitle} pubDate={pubDate} modDate={modDate} image={image} description={description}>
 <h2>Introduction</h2>
 <p>This site is the official website of Nao, operated by <a href="/profile/about" class="link">Nao</a>.</p>
 <h2>Published Content</h2>
-<p>This section introduces the content available on the site. </p>
+<p>This section introduces the content available on the site.</p>
 <table class="m">
 <thead>
 <tr>
@@ -23,12 +25,16 @@ const ModDate = "2025-12-11";
 </thead>
 <tbody>
 <tr>
+<td>About This Site</td>
+<td>Explains the operational policy and purpose of the site. </td>
+</tr>
+<tr>
 <td>Profile</td>
-<td>Nao's basic information</td>
+<td>Basic information about Nao. </td>
 </tr>
 <tr>
 <td>Mental Health</td>
-<td>Contains information on mental health compiled by Nao. </td>
+<td>Contains information about mental health compiled by Nao. </td>
 </tr>
 <tr>
 <td>Information Literacy</td>
@@ -36,11 +42,15 @@ const ModDate = "2025-12-11";
 </tr>
 <tr>
 <td>Nao's Blog</td>
-<td>This is Nao's blog. </td>
+<td>Nao's blog. </td>
+</tr>
+<tr>
+<td>Nao's Audio Blog</td>
+<td>This is Nao's blog for audio distribution. </td>
 </tr>
 <tr>
 <td>Nao's Activity Bases</td>
-<td>Contains Nao content from external sites. </td>
+<td>This contains Nao content from external sites. </td>
 </tr>
 </tbody>
 </table>
@@ -51,44 +61,52 @@ const ModDate = "2025-12-11";
   </h3>
 
 <p>We aim for a sustainable update frequency, targeting a pace of <u class="orange">once a week</u> for article updates. </p>
-  <p>Should you have any questions or feedback regarding the content of our articles, please contact us via the <a href="/contact/" class="link">contact page</a>. </p>
- <p class="mt-2 font-semibold" style="color:#ef7e7e; padding-top:10px; margin-top:10px; border-top:1px solid #727272">Update History of Important Matters</p>
-  <ul style="font-weight:600;">
-    {update.map((update) => {
-      return update.category==="Policy" && (
-      <li class="my-1">
-        <time style="color:#ff9a4b;" class="text-sm" datetime={`${update.date}T00:00:00+09:00`}>{update.date}</time>
-        {' : '}
-        <a href={`/updates/${update.slug}`} class="text-[#c9c9c9] hover:underline hover:underline-offset-4">
-          {update.title}
-        </a>
-      </li>
-    )
-    }).filter(Boolean).slice(0, 3)}
-  </ul>
-   <p class="mt-2 font-semibold" style="color:#ceb300; padding-top:10px; margin-top:10px; border-top:1px solid #727272">Site Update History</p>
-  <ul style="font-weight:600;">
-    {update.map((update) => {
-      return update.category==="Technical" && (
-      <li class="my-1">
-        <time style="color:#ff9a4b;" class="text-sm" datetime={`${update.date}T00:00:00+09:00`}>{update.date}</time>
-        {' : '}
-        <a href={`/updates/${update.slug}`} class="text-[#c9c9c9] hover:underline hover:underline-offset-4">
-          {update.title}
-        </a>
-      </li>
-    )
-    }).filter(Boolean).slice(0, 3)}
-  </ul>
-  <p class="mt-2 font-semibold" style="color:#cdcdcd; padding-top:10px; margin-top:10px; border-top:1px solid #727272">Update Information List</p>
+  <p>Should you have any questions or feedback regarding article content, please contact us via the <a href="/contact/" class="link">contact page</a>. </p>
+  <p class="mt-2 font-semibold" style="color:#ef7e7e; font-weight:500; padding-top:10px; margin-top:10px; border-top:1px solid #727272">Update History for Important Matters</p>
 
-  <ul style="font-weight:600;">
+<ul style="font-weight:500;">
     {update.map((update) => {
-      return update.category==="Article" && (
+      return update.category==='Policy' && (
       <li class="my-1">
-        <time style="color:#ff9a4b;" class="text-sm" datetime={`${update.date}T00:00:00+09:00`}>{update.date}</time>
-        {' : '}
-        <a href={`/updates/${update.slug}`} class="text-[#c9c9c9] hover:underline hover:underline-offset-4">
+
+<time style="colour:#ff9a4b;" class="text-sm" datetime={`${update.date}T00:00:00+09:00`}>{update.date}</time>
+        {" : "}
+
+<a href={`/updates/${update.slug}`} class="text-[#c9c9c9] hover:underline hover:underline-offset-4">
+          {update.title}
+        </a>
+      </li>
+    )
+    }).filter(Boolean).slice(0, 3)}
+  </ul>
+   <p class="mt-2 font-semibold" style="color:#ceb300; font-weight:500; padding-top:10px; margin-top:10px; border-top:1px solid #727272">Site Update History</p>
+
+<ul style="font-weight:500;">
+    {update.map((update) => {
+      return update.category==='Technical' && (
+      <li class="my-1">
+
+<time style="colour:#ff9a4b;" class="text-sm" datetime={`${update.date}T00:00:00+09:00`}>{update.date}</time>
+        {" : "}
+
+<a href={`/updates/${update.slug}`} class="text-[#c9c9c9] hover:underline hover:underline-offset-4">
+          {update.title}
+        </a>
+      </li>
+    )
+    }).filter(Boolean).slice(0, 3)}
+  </ul>
+  <p class="mt-2 font-semibold" style="font-weight:500; colour:#cdcdcd; padding-top:10px; margin-top:10px; border-top:1px solid #727272">Article update history</p>
+
+<ul style="font-weight:500;">
+    {update.map((update) => {
+      return update.category==='Article' && (
+      <li class="my-1">
+
+<time style="color:#ff9a4b;" class="font-weight:500; text-sm" datetime={`${update.date}T00:00:00+09:00`}>{update.date}</time>
+        {" : "}
+
+<a href={`/updates/${update.slug}`} class="text-[#c9c9c9] hover:underline hover:underline-offset-4">
           {update.title}
         </a>
       </li>
@@ -96,10 +114,7 @@ const ModDate = "2025-12-11";
     }).filter(Boolean).slice(0, 3)}
   </ul>
 
-  <p style="margin-top:10px; text-align:right;">
-    <a href="/updates/" class="gold underline">→ View all announcements</a>
+<p style="margin-top:10px; text-align:right;">
+    <a href="/updates/" style="font-weight:100;" class="gold underline hover:text-[#fff]">→ View all updates</a>
   </p>
 </div>
-</main>
-</Layout>
-

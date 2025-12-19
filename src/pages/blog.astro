@@ -1,42 +1,33 @@
 ---
-import Layout from "../layouts/Layout.astro";
-import MainToc from "../components/MainToc.astro";
+import PageLayout from '../layouts/PageLayout.astro';
 const pageTitle = "Nao's Blog";
-const PubDate = "2025-12-11";
-const ModDate = "2025-12-12";
+const pubDate = "2025-12-01";
+const modDate = "2025-12-20";
+const image = {
+    url: '/images/blog2.webp',
+    alt: "Image for Nao's blog",
+};
 ---
 
-<Layout pageTitle={pageTitle} PubDate={PubDate} ModDate={ModDate}>
-<main id="article-body" class="w-full max-w-6xl bg-[#1e1e1e] px-16 pb-[60px] border-l-[1px] border-[#3c3c3c]">
-<h1>Nao's Blog</h1>
-    <ul class="tags mb-0 flex flex-wrap gap-2 my-0 w-full justify-end">
-        <li class="mb-2 text-sm">📰 Created: {PubDate.toString().slice(0,10)}</li>
-
-{ModDate && <li class="mb-2 text-sm">✏️Last updated: {ModDate.toString().slice(0,10)}</li>}
-    </ul>
-<img class="profile-picture max-w-full h-auto" src="/images/blog2.webp" alt="Nao's Blog" />
-<h2>Contents</h2>
-<MainToc />
+<PageLayout pageTitle={pageTitle} pubDate={pubDate} modDate={modDate} image={image}>
 <h2>Overview</h2>
-<p>This is Nao's dedicated blog, compiling her thoughts. <br>
-I'll freely write down whatever comes to mind. </p>
+<p>This is a dedicated blog summarising Nao's thoughts.<br>
+I'll freely write down whatever comes to mind.</p>
 <h2>Articles</h2>
 <h3>Psychology</h3>
-<span>Tags: <a href="/tags/Psychology" class="link">Psychology</a></span>
+<span>Tags: <a href="/tags/psychology" class="link">Psychology</a></span>
 <ul class="menu-list">
-<li><a href="/blog/psychology-ep1">That Phenomenon Where You Take What Someone Says at Face Value Because They Sound So Confident</a></li>
+<li><a href="/blog/psychology-ep1">That phenomenon where you believe something is correct simply because it's said with such confidence</a></li>
 </ul>
-<h3>Relationships</h3>
-<span>Tags: <a href="/tags/Relationships" class="link">Human Relationships</a></span>
+<h3>Human Relationships</h3>
+<span>Tags: <a href="/tags/human-relationships" class="link">Human Relationships</a></span>
 <ul class="menu-list">
 <li><a href="/blog/human-ep1">There's no one who can replace you</a></li>
 <li><a href="/blog/human-ep2">‘There's no such thing as a perfect person’ – How her words from 10 years ago became my creed</a></li>
 </ul>
 <h3>Other</h3>
-<span>Tags: <a href="/tags/Other" class="link">Other</a></span>
+<span>Tags: <a href="/tags/other" class="link">Other</a></span>
 <ul class="menu-list">
 <li><a href="/blog/etc-ep1">Would you believe it, someone has actually created business cards for this site. </a></li>
 </ul>
-
-</main>
-</Layout>
+</PageLayout>

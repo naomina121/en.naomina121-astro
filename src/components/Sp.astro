@@ -1,8 +1,9 @@
 ---
+const isIndex = Astro.url.pathname === "/";
 ---
 <input type="checkbox" id="menu-toggle" class="hidden" />
 <label for="menu-toggle" class="sp-label cursor-pointer items-center gap-2">
-<img class="w-10 h-10 rounded-full" src="/images/naomina.jpg" alt="naomina121のアイコン" />
+<img class="w-10 h-10 rounded-full" src="/images/naomina.jpg" alt="naomina121's icon" />
 <span class="text-xs sp-open">MENU</span>
 </label>
 <div class="sp-sidebar fixed top-0 left-0 w-64 h-full bg-[#292929] shadow-md z-50">
@@ -11,15 +12,27 @@
             <span class="text-4xl">×</span>
             <span class="text-xs mb-6 block sp-close">CLOSE</span>
         </label>
-        <a href="/" class="site-name text-4xl font-bold mb-4">NAOMINA121</a>
+        {isIndex && (<h1 class="site-name text-4xl font-bold mb-4">NAOMINA121</h1>)}{!isIndex && (<a href="/" class="site-name text-4xl font-bold mb-4">NAOMINA121</a>)}</a>
 <hr class="my-4 border-gray-600" />
         <ul class="sp-menu">
         <li><a href="/" class="block py-2 px-4">Top Page</a></li>
+                <li><h2 class="font-bold px-4 py-2">About This Site</h2><a href="/about/" class="block py-2 px-6">About This Site</a>
+                        <ul class="mb-4">
+    <li><a href="/about/mental-health-and-information-literacy/" class="block py-2 px-4">Why Mental Health × Information Literacy?</a></li>
+    <li><a href="/about/non-commercial-policy/" class="block py-2 px-4">Why We Do Not Place Ads or Aim for Profit</a></li>
+    <li><a href="/about/writing-guidelines/" class="block py-2 px-4">Expressions to Avoid When Writing Articles</a></li>
+    <li><a href="/about/how-i-think/" class="block py-2 px-4">Why I Have a Strong Desire to Analyze</a></li>
+    <li><a href="/about/design-philosophy/" class="block py-2 px-4">Why This Site Adopts a Luxurious Design Based on Gold and Black</a></li>
+    <li><a href="/about/ai-content-policy/" class="block py-2 px-4">Quality Standards for AI Usage on This Site</a></li>
+    <li><a href="/about/cc-by-nc-nd/" class="block py-2 px-4">About the License of This Site and Articles (Regarding Citations)</a></li>
+                </ul>
+                </li>
+
         <li>
 <h2 class="font-bold px-4 py-2">Profile</h2>
-            <a href="/profile/about" class="block py-2 px-4">About Nao</a>
+            <a href="/profile/about" class="block py-2 px-4">About Me</a>
         <ul class="mb-4">
-            <li><a href="/profile/nobody-perfect" class="block py-2 px-6">Nobody is Perfect</a></li>
+            <li><a href="/profile/nobody-perfect" class="block py-2 px-6">Nobody's Perfect</a></li>
             <li><a href="/profile/nao-analysis" class="block py-2 px-6">Nao's Analysis Results</a></li>
         </ul></li>
         <li>
@@ -27,7 +40,7 @@
             <a href="/mental-health/" class="block py-2 px-4">Mental Health</a></li>
         <li><a href="/info-literacy/" class="block py-2 px-4">Information Literacy</a></li>
         <li><a href="/blog/" class="block py-2 px-4">Nao's Blog</a></li>
-        <li><a href="/links/" class="block py-2 px-4">Nao's Activity Base</a></li>
+        <li><a href="/links/" class="block py-2 px-4">Nao's Activity Bases</a></li>
         </ul>
     </div>
 

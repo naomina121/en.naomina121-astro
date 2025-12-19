@@ -1,14 +1,11 @@
 ---
-const pageTitle = "Contact";
-import Layout from "../layouts/Layout.astro";
-const PubDate = "2025-12-11";
-const ModDate = "2025-12-11";
+const pageTitle = "Contact Us";
+import PageLayout from '../layouts/PageLayout.astro';
 ---
 
-<Layout pageTitle={pageTitle} PubDate={PubDate} ModDate={ModDate}>
-<main class="w-full max-w-6xl bg-[#1e1e1e] pb-[60px] px-16 border-l-[1px] border-[#3c3c3c]">
+<PageLayout pageTitle={pageTitle}>
 <div class='mb-6 text-center'>
-    <h1 class='text-3xl md:text-4xl font-bold mb-6'>Contact</h1>
+    <h1 class='text-3xl md:text-4xl font-bold mb-6'>{pageTitle}</h1>
     <div class='card border p-8 bg-[#292929] max-w-4xl mx-auto'>
       <form
         class='contact-form'
@@ -16,7 +13,7 @@ const ModDate = "2025-12-11";
         method='POST'
         id='contactForm'
       >
-        <!-- Name -->
+        <!-- お名前 -->
         <div>
           <label for='name'>
             Name
@@ -27,11 +24,11 @@ const ModDate = "2025-12-11";
             id='name'
             name='name'
             required
-            placeholder='Your Name'
+            placeholder='John Doe'
           />
         </div>
 
-        <!-- E-mail -->
+        <!-- メールアドレス -->
         <div>
           <label for='email'>
             Email Address
@@ -46,12 +43,12 @@ const ModDate = "2025-12-11";
           />
         </div>
 
-        <!-- Inquiry Category -->
+        <!-- お問い合わせ種別 -->
         <div class='text-gray-900'>
           <label
             for='category'
           >
-            Inquiry Category
+            Inquiry Type
             <span class='required'>*</span>
           </label>
           <select
@@ -60,10 +57,10 @@ const ModDate = "2025-12-11";
             required
           >
             <option value=''>Please select</option>
-            <option value='general'>general</option>
+            <option value='general'>General Inquiry</option>
             <option value='request'>Article Request</option>
             <option value='collaboration'>
-              Providing accurate information on article content, typos, etc.
+              Providing accurate information about article content, typos, etc.
             </option>
             <option value='bug'>Bug Report</option>
             <option value='other'>Other</option>
@@ -81,8 +78,7 @@ const ModDate = "2025-12-11";
             id='subject'
             name='subject'
             required
-
-            placeholder='Please enter the subject'
+            placeholder='Enter the subject of your inquiry'
           />
         </div>
 
@@ -98,7 +94,7 @@ const ModDate = "2025-12-11";
             rows='6'
             required
             class=' resize-none'
-            placeholder='Please provide detailed inquiry content'
+            placeholder='Please provide detailed information about your inquiry'
           ></textarea>
         </div>
 
@@ -114,10 +110,10 @@ const ModDate = "2025-12-11";
             for='privacy'
           >
             <a
-              href='http://en.naomina121.com/privacy/'
+              href='http://naomina121.com/privacy/'
               target='_blank'
               rel='noopener noreferrer'
-            >Privacy Policy</a> Agreement
+            >Privacy Policy</a> I agree to the terms
           </label>
         </div>
 
@@ -131,34 +127,31 @@ const ModDate = "2025-12-11";
       </form>
     </div>
 
-    <!-- 注意事項 -->
+    <!-- Important Notes -->
     <div class='mt-12 max-w-2xl mx-auto'>
       <div
         class='card rounded-lg border p-6'
         style='background-color: var(--bg-secondary)'
       >
         <h2 class='font-bold text-lg mb-4'>Important Notes</h2>
-        <ul class='text-left space-y-2 text-sm' style='color: var(--text-secondary)'>
+        <ul class='space-y-2 text-sm' style='color: var(--text-secondary)'>
           <li class='flex items-start'>
             <span class='mr-2'>•</span>
             <span
-            >Responses to inquiries typically take 2-3 days.</span>
+            >Responses to inquiries usually take about 2-3 days.</span>
           </li>
           <li class='flex items-start'>
             <span class='mr-2'>•</span>
             <span
-            >Due to spam prevention measures, you may not receive a reply. Please check your email settings.</span>
+            >Due to spam prevention measures, replies may not be received. Please check your email settings.</span>
           </li>
           <li class='flex items-start'>
             <span class='mr-2'>•</span>
             <span
-            >Depending on the content of your inquiry, we may not be able to respond.</span>
+            >Depending on the content of the inquiry, we may not be able to respond.</span>
           </li>
         </ul>
       </div>
     </div>
   </div>
-
-
-</main>
-</Layout>
+</PageLayout>
