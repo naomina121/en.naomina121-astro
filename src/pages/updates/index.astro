@@ -1,7 +1,7 @@
 ---
 import PageLayout from '../../layouts/PageLayout.astro';
 import { siteUpdates } from "../../data/update";
-const updates = [...siteUpdates].sort((a, b) => b.date.localeCompare(a.date));
+const updates = [...siteUpdates].sort((a, b) => String(b.date).localeCompare(String(a.date)));
 const pageTitle = "Updates";
 ---
 
