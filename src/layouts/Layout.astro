@@ -187,7 +187,7 @@ const pageSchema = !getIsUrl("/podcast/") && getIsUrlStartsWith("/podcast/") ?
    };
   }),
   },
-  } : !getIsUrl("/updates/") && !getIsUrlStartsWith("/updates/") ? infoSchema : getIsUrlStartsWith("/updates/") ? {
+  } : getIsUrl("/updates/") ? infoSchema : getIsUrlStartsWith("/updates/") ? {
     "@context": "https://schema.org/",
     "@type": "WebPage",
     "name": postTitle,
@@ -292,79 +292,79 @@ const pageSchema = !getIsUrl("/podcast/") && getIsUrlStartsWith("/podcast/") ?
   };
 
 const breadcrumbItems = isHome
-  ? [{ name: 'Home', item: Astro.site.origin + '/' }]
+  ? [{ name: 'Home', item: siteUrl + '/' }]
   : getIsUrl("/updates/")
   ? [
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Updates', item: Astro.site.origin + '/updates/' },
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'Updates', item: siteUrl + '/updates/' },
   ]
   : getIsUrlStartsWith("/updates/")
   ? [
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Updates', item: Astro.site.origin + '/updates/' },
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'Updates', item: siteUrl + '/updates/' },
       { name: postTitle, item: canonicalURL.toString() }
     ]
 :getIsUrl("/about/")?[
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'About This Site', item: Astro.site.origin + '/about/' }
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'About This Site', item: siteUrl + '/about/' }
 ]
   :getIsUrlStartsWith("/about/")?[
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'About This Site', item: Astro.site.origin + '/about/' },
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'About This Site', item: siteUrl + '/about/' },
       { name: postTitle, item: canonicalURL.toString() }
 ]
 :getIsUrl("/info-literacy/")?[
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Information Literacy', item: Astro.site.origin + '/info-literacy/' }
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'Information Literacy', item: siteUrl + '/info-literacy/' }
 ]
   :getIsUrl("/mental-health/")?[
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Mental Health', item: Astro.site.origin + '/mental-health/' },
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'Mental Health', item: siteUrl + '/mental-health/' },
 ]:getIsUrl("/blog/")?[
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Blog', item: Astro.site.origin + '/blog/' }
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'Blog', item: siteUrl + '/blog/' }
 ]:getIsUrl("/podcast/")?[
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Podcast', item: Astro.site.origin + '/podcast/' }
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'Podcast', item: siteUrl + '/podcast/' }
 ]
 :getIsUrl("/tags/")
 ?[
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Tag List', item: Astro.site.origin + '/tags/' }
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'Tag List', item: siteUrl + '/tags/' }
 ]
   : getIsUrlStartsWith("/tags/")
   ? [
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Tag List', item: Astro.site.origin + '/tags/' },
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'Tag List', item: siteUrl + '/tags/' },
       { name: postTitle, item: canonicalURL.toString() }
     ]
     :
 getIsUrlStartsWith("/blog/") ? [
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Blog', item: Astro.site.origin + '/blog/' },
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'Blog', item: siteUrl + '/blog/' },
         { name: postTitle, item: canonicalURL.toString() }
     ] : getIsUrlStartsWith("/profile/") ? [
-      { name: 'Home', item: Astro.site.origin + '/' },
+      { name: 'Home', item: siteUrl + '/' },
       { name: 'Profile', item: canonicalURL.toString() },
       { name: postTitle, item: canonicalURL.toString() }
     ] : getIsUrlStartsWith("/mental-health/") ? [
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Mental Health', item: Astro.site.origin + '/mental-health/' },
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'Mental Health', item: siteUrl + '/mental-health/' },
       { name: postTitle, item: canonicalURL.toString() }
     ] : getIsUrlStartsWith("/info-literacy/") ? [
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Information Literacy', item: Astro.site.origin + '/info-literacy/' },
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'Information Literacy', item: siteUrl + '/info-literacy/' },
       { name: postTitle, item: canonicalURL.toString() }
     ] : getIsUrlStartsWith("/podcast/") ? [
-      { name: 'Home', item: Astro.site.origin + '/' },
-      { name: 'Podcast', item: Astro.site.origin + '/podcast/' },
+      { name: 'Home', item: siteUrl + '/' },
+      { name: 'Podcast', item: siteUrl + '/podcast/' },
       { name: postTitle, item: canonicalURL.toString() }
     ] : getIsUrlStartsWith("/materials/") ? [
-      { name: 'Home', item: Astro.site.origin + '/' },
+      { name: 'Home', item: siteUrl + '/' },
       { name: 'Materials', item: canonicalURL.toString() },
       { name: postTitle, item: canonicalURL.toString() }
     ] : [
-      { name: 'Home', item: Astro.site.origin + '/' },
+      { name: 'Home', item: siteUrl + '/' },
       { name: postTitle, item: canonicalURL.toString() }
     ];
 
