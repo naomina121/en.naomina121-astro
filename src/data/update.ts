@@ -1,6 +1,6 @@
 export const siteUpdates = [
   {
-      date: 2025-12-20,
+      date: "2025-12-20",
       slug: 'article-github-history-structured-data',
       title: 'Added GitHub update history to each article and enabled structured data support.',
       content: "Added GitHub update history to each article and enabled structured data support.Minor adjustments have also been made to each article.",
