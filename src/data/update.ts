@@ -1,4 +1,11 @@
 export const siteUpdates = [
+{
+      date: '2025-12-21',
+      slug: "metadata-description-improved",
+      title: "Improved metadata description data for all pages",
+      content: "I have added the description metadata to all pages.",
+      category:"Technical"
+},
   {
       date: "2025-12-20",
       slug: 'article-github-history-structured-data',
