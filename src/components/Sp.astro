@@ -3,7 +3,7 @@ const isIndex = Astro.url.pathname === "/";
 ---
 <input type="checkbox" id="menu-toggle" class="hidden" />
 <label for="menu-toggle" class="sp-label cursor-pointer items-center gap-2">
-{isIndex && (<h1 class="site-name text-4xl inline-block font-bold ml-4">NAOMINA121</h1>)}{!isIndex && (<a href="/" class="site-name text-4xl inline-block font-bold mb-4">NAOMINA121</a>)}
+<a href="/" class="site-name text-4xl inline-block font-bold mb-4" aria-hidden="true">NAOMINA121</a>
 
     <span>
 <img class="w-10 h-10 rounded-full" src="/images/naomina.jpg" alt="naomina121's icon" />
@@ -13,10 +13,10 @@ const isIndex = Astro.url.pathname === "/";
 </label>
 <div class="sp-sidebar fixed top-0 left-0 w-64 h-full bg-[#292929] shadow-md z-50">
     <div class="p-4">
-{isIndex && (<h1 class="site-name text-4xl inline-block font-bold mb-4">NAOMINA121</h1>)}{!isIndex && (<a href="/" class="site-name text-4xl inline-block font-bold mb-4">NAOMINA121</a>)}
+<a href="/" class="site-name text-4xl inline-block font-bold mb-4" aria-hidden="true">NAOMINA121</a>
         <ul class="sp-menu">
         <li><a href="/" class="block py-2 px-4">Top Page</a></li>
-                <li><h2 class="font-bold px-4 py-2">About This Site</h2><a href="/about/" class="block py-2 px-6">About This Site</a>
+                <li><p class="font-bold px-4 py-2">About This Site</p><a href="/about/" class="block py-2 px-6">About This Site</a>
                         <ul class="mb-4">
     <li><a href="/about/mental-health-and-information-literacy/" class="block py-2 px-4">Why Mental Health × Information Literacy?</a></li>
     <li><a href="/about/non-commercial-policy/" class="block py-2 px-4">Why We Do Not Place Ads or Aim for Profit</a></li>
@@ -29,14 +29,14 @@ const isIndex = Astro.url.pathname === "/";
                 </li>
 
         <li>
-<h2 class="font-bold px-4 py-2">Profile</h2>
+<p class="font-bold px-4 py-2">Profile</p>
             <a href="/profile/about" class="block py-2 px-4">About Me</a>
         <ul class="mb-4">
             <li><a href="/profile/nobody-perfect" class="block py-2 px-6">Nobody's Perfect</a></li>
             <li><a href="/profile/nao-analysis" class="block py-2 px-6">Nao's Analysis Results</a></li>
         </ul></li>
         <li>
-            <h2 class="font-bold px-4 py-2">Main Content</h2>
+            <p class="font-bold px-4 py-2">Main Content</p>
             <a href="/mental-health/" class="block py-2 px-4">Mental Health</a></li>
         <li><a href="/info-literacy/" class="block py-2 px-4">Information Literacy</a></li>
         <li><a href="/blog/" class="block py-2 px-4">Nao's Blog</a></li>
