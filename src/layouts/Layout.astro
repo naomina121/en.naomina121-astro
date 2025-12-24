@@ -5,6 +5,7 @@ import Sp from '@components/Sp.astro';
 import StructuredBreadcrumbs from '@components/Breadcrumbs.astro';
 import Footer from '@components/Footer.astro';
 import { siteUpdates } from "../data/update";
+import Analytics from '@vercel/analytics/astro';
 function getIsUrl(pathname) {
   return Astro.url.pathname === pathname;
 }
@@ -371,6 +372,7 @@ getIsUrlStartsWith("/blog/") ? [
 <!doctype html>
 <html lang={lang}>
   <head prefix="og: http://ogp.me/ns#">
+    <Analytics />
 <script is:inline src="https://www.google.com/recaptcha/api.js"></script>
   <script is:inline>
   function onSubmit(token) {
@@ -897,7 +899,7 @@ style.textContent = `
     opacity: 0.8;
   }
 
-  /* トランスクリプトソースを非表示にする */
+  /* トランスクリプトソースを非表���にする */
   #transcript-source {
     display: none;
   }
